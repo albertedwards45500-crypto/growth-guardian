@@ -1,0 +1,1082 @@
+{
+  "status": "passed",
+  "top_k": 3,
+  "min_score": 0.55,
+  "cases": 17,
+  "positive_cases": 12,
+  "empty_cases": 5,
+  "retrieval_errors": 0,
+  "hit_rate": 1.0,
+  "mean_recall": 1.0,
+  "mean_precision": 0.7361,
+  "mrr": 1.0,
+  "empty_result_accuracy": 1.0,
+  "results": [
+    {
+      "case_id": "responsive-feeding",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_hunger_fullness_cues",
+        "who_infant_young_child_feeding",
+        "nhs_solid_food_readiness"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_hunger_fullness_cues",
+          "score": 0.7594
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.68337
+        },
+        {
+          "document_id": "nhs_solid_food_readiness",
+          "score": 0.58698
+        }
+      ]
+    },
+    {
+      "case_id": "closing-mouth",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_hunger_fullness_cues",
+        "who_infant_young_child_feeding",
+        "nhs_choking_hazards"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_hunger_fullness_cues",
+          "score": 0.66139
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.60692
+        },
+        {
+          "document_id": "nhs_choking_hazards",
+          "score": 0.57881
+        }
+      ]
+    },
+    {
+      "case_id": "solid-food-readiness",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_solid_food_readiness",
+        "who_infant_young_child_feeding",
+        "nhs_hunger_fullness_cues"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_solid_food_readiness",
+          "score": 0.70361
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.6572
+        },
+        {
+          "document_id": "nhs_hunger_fullness_cues",
+          "score": 0.6559
+        }
+      ]
+    },
+    {
+      "case_id": "readiness-before-six",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_solid_food_readiness",
+        "who_infant_young_child_feeding"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_solid_food_readiness",
+          "score": 0.6911
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.63564
+        }
+      ]
+    },
+    {
+      "case_id": "premature-readiness",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_solid_food_readiness",
+        "who_infant_young_child_feeding"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_solid_food_readiness",
+          "score": 0.74177
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.68907
+        }
+      ]
+    },
+    {
+      "case_id": "choking-safety",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_choking_hazards"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_choking_hazards",
+          "score": 0.71277
+        }
+      ]
+    },
+    {
+      "case_id": "upright-supervision",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_choking_hazards",
+        "who_infant_young_child_feeding"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_choking_hazards",
+          "score": 0.63429
+        },
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.55651
+        }
+      ]
+    },
+    {
+      "case_id": "honey-eight-months",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_honey_under_12_months"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_honey_under_12_months",
+          "score": 0.68327
+        }
+      ]
+    },
+    {
+      "case_id": "honey-last-eligible-month",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_honey_under_12_months"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_honey_under_12_months",
+          "score": 0.69901
+        }
+      ]
+    },
+    {
+      "case_id": "honey-first-age-boundary",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_honey_under_12_months"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_honey_under_12_months",
+          "score": 0.76575
+        }
+      ]
+    },
+    {
+      "case_id": "age-upper-boundary",
+      "passed": true,
+      "retrieved_document_ids": [
+        "who_infant_young_child_feeding"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "who_infant_young_child_feeding",
+          "score": 0.60343
+        }
+      ]
+    },
+    {
+      "case_id": "outside-corpus-age-range",
+      "passed": true,
+      "retrieved_document_ids": [],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": []
+    },
+    {
+      "case_id": "wrong-topic-growth",
+      "passed": true,
+      "retrieved_document_ids": [],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": []
+    },
+    {
+      "case_id": "before-source-check-date",
+      "passed": true,
+      "retrieved_document_ids": [],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": []
+    },
+    {
+      "case_id": "unsupported-topic-content",
+      "passed": true,
+      "retrieved_document_ids": [],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": []
+    },
+    {
+      "case_id": "honey-excluded-at-twelve",
+      "passed": true,
+      "retrieved_document_ids": [
+        "nhs_choking_hazards"
+      ],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": [
+        {
+          "document_id": "nhs_choking_hazards",
+          "score": 0.64508
+        }
+      ]
+    },
+    {
+      "case_id": "honey-query-after-age-range",
+      "passed": true,
+      "retrieved_document_ids": [],
+      "missing_document_ids": [],
+      "forbidden_document_ids": [],
+      "retrieval_failed": false,
+      "retrieved_document_scores": []
+    }
+  ],
+  "schema_version": "candidate-preview-v1",
+  "evaluated_on": "2026-10-23",
+  "evaluation_scope": "pending_candidate_retrieval_only",
+  "candidate_review_status": "pending",
+  "production_index_opened": false,
+  "threshold_comparison": [
+    {
+      "status": "passed",
+      "top_k": 3,
+      "min_score": 0.6,
+      "cases": 17,
+      "positive_cases": 12,
+      "empty_cases": 5,
+      "retrieval_errors": 0,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_precision": 0.8194,
+      "mrr": 1.0,
+      "empty_result_accuracy": 1.0,
+      "results": [
+        {
+          "case_id": "responsive-feeding",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_hunger_fullness_cues",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.7594
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.68337
+            }
+          ]
+        },
+        {
+          "case_id": "closing-mouth",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_hunger_fullness_cues",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.66139
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.60692
+            }
+          ]
+        },
+        {
+          "case_id": "solid-food-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness",
+            "who_infant_young_child_feeding",
+            "nhs_hunger_fullness_cues"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.70361
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.6572
+            },
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.6559
+            }
+          ]
+        },
+        {
+          "case_id": "readiness-before-six",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.6911
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.63564
+            }
+          ]
+        },
+        {
+          "case_id": "premature-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.74177
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.68907
+            }
+          ]
+        },
+        {
+          "case_id": "choking-safety",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_choking_hazards",
+              "score": 0.71277
+            }
+          ]
+        },
+        {
+          "case_id": "upright-supervision",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_choking_hazards",
+              "score": 0.63429
+            }
+          ]
+        },
+        {
+          "case_id": "honey-eight-months",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.68327
+            }
+          ]
+        },
+        {
+          "case_id": "honey-last-eligible-month",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.69901
+            }
+          ]
+        },
+        {
+          "case_id": "honey-first-age-boundary",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.76575
+            }
+          ]
+        },
+        {
+          "case_id": "age-upper-boundary",
+          "passed": true,
+          "retrieved_document_ids": [
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.60343
+            }
+          ]
+        },
+        {
+          "case_id": "outside-corpus-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "wrong-topic-growth",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "before-source-check-date",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "unsupported-topic-content",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-excluded-at-twelve",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_choking_hazards",
+              "score": 0.64508
+            }
+          ]
+        },
+        {
+          "case_id": "honey-query-after-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        }
+      ]
+    },
+    {
+      "status": "failed",
+      "top_k": 3,
+      "min_score": 0.65,
+      "cases": 17,
+      "positive_cases": 12,
+      "empty_cases": 5,
+      "retrieval_errors": 0,
+      "hit_rate": 0.75,
+      "mean_recall": 0.75,
+      "mean_precision": 0.6528,
+      "mrr": 0.75,
+      "empty_result_accuracy": 1.0,
+      "results": [
+        {
+          "case_id": "responsive-feeding",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_hunger_fullness_cues",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.7594
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.68337
+            }
+          ]
+        },
+        {
+          "case_id": "closing-mouth",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_hunger_fullness_cues"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.66139
+            }
+          ]
+        },
+        {
+          "case_id": "solid-food-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness",
+            "who_infant_young_child_feeding",
+            "nhs_hunger_fullness_cues"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.70361
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.6572
+            },
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.6559
+            }
+          ]
+        },
+        {
+          "case_id": "readiness-before-six",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.6911
+            }
+          ]
+        },
+        {
+          "case_id": "premature-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness",
+            "who_infant_young_child_feeding"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.74177
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.68907
+            }
+          ]
+        },
+        {
+          "case_id": "choking-safety",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_choking_hazards",
+              "score": 0.71277
+            }
+          ]
+        },
+        {
+          "case_id": "upright-supervision",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-eight-months",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.68327
+            }
+          ]
+        },
+        {
+          "case_id": "honey-last-eligible-month",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.69901
+            }
+          ]
+        },
+        {
+          "case_id": "honey-first-age-boundary",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.76575
+            }
+          ]
+        },
+        {
+          "case_id": "age-upper-boundary",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "who_infant_young_child_feeding"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "outside-corpus-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "wrong-topic-growth",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "before-source-check-date",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "unsupported-topic-content",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-excluded-at-twelve",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-query-after-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        }
+      ]
+    },
+    {
+      "status": "failed",
+      "top_k": 3,
+      "min_score": 0.7,
+      "cases": 17,
+      "positive_cases": 12,
+      "empty_cases": 5,
+      "retrieval_errors": 0,
+      "hit_rate": 0.4167,
+      "mean_recall": 0.375,
+      "mean_precision": 0.4167,
+      "mrr": 0.4167,
+      "empty_result_accuracy": 1.0,
+      "results": [
+        {
+          "case_id": "responsive-feeding",
+          "passed": false,
+          "retrieved_document_ids": [
+            "nhs_hunger_fullness_cues"
+          ],
+          "missing_document_ids": [
+            "who_infant_young_child_feeding"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_hunger_fullness_cues",
+              "score": 0.7594
+            }
+          ]
+        },
+        {
+          "case_id": "closing-mouth",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_hunger_fullness_cues"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "solid-food-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.70361
+            }
+          ]
+        },
+        {
+          "case_id": "readiness-before-six",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_solid_food_readiness"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "premature-readiness",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_solid_food_readiness"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.74177
+            }
+          ]
+        },
+        {
+          "case_id": "choking-safety",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_choking_hazards",
+              "score": 0.71277
+            }
+          ]
+        },
+        {
+          "case_id": "upright-supervision",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-eight-months",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-last-eligible-month",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-first-age-boundary",
+          "passed": true,
+          "retrieved_document_ids": [
+            "nhs_honey_under_12_months"
+          ],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.76575
+            }
+          ]
+        },
+        {
+          "case_id": "age-upper-boundary",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "who_infant_young_child_feeding"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "outside-corpus-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "wrong-topic-growth",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "before-source-check-date",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "unsupported-topic-content",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-excluded-at-twelve",
+          "passed": false,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [
+            "nhs_choking_hazards"
+          ],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        },
+        {
+          "case_id": "honey-query-after-age-range",
+          "passed": true,
+          "retrieved_document_ids": [],
+          "missing_document_ids": [],
+          "forbidden_document_ids": [],
+          "retrieval_failed": false,
+          "retrieved_document_scores": []
+        }
+      ]
+    }
+  ],
+  "index_storage": "memory",
+  "application_rag_modified": false,
+  "documents": 5,
+  "chunks": 5,
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dimensions": 1024,
+  "embedding_requests": 18,
+  "embedded_texts": 22,
+  "candidate_sha256": "d96a02f9986c591d35998efdb780dbd83cefed62f11af5d476fef6bbd055dbd9",
+  "cases_sha256": "c2a5835531878f0718e615a442cf49cad498c15f5f80f30caf8256373d5cbe4c",
+  "limitations": [
+    "draft_labels_not_independently_reviewed",
+    "no_content_approval",
+    "no_production_review_or_expiry_filter_evaluation",
+    "no_chat_model_or_baby_data_evaluation"
+  ]
+}

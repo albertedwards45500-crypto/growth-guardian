@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--
+@file: backend/static/test-runner.html
+@description: 一键启动测试控制台。点击主按钮触发后端测试任务，
+             通过轮询展示 运行中 / 成功 / 失败 三种状态，并输出测试统计与失败明细。
+@design: 遵循 "Warm Growth Space" 设计系统（暗色基底 #17130F、南瓜橙主色 #F28C45、
+         8px 间距体系、成长印记圆环签名元素、Plus Jakarta Sans / Be Vietnam Pro 字体）。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+<title>一键测试 · 宝宝成长记录</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Be+Vietnam+Pro:wght@400;500&amp;display=swap" rel="stylesheet" />
+<style>
+/* ===== 设计系统 Token（源自 DESIGN.md） ===== */
+:root {
+  --bg: #17130f;                 /* background */
+  --surface: #2e2821;            /* surface */
+  --surface-container: #231f1b;  /* surface-container */
+  --surface-variant: #39342f;    /* surface-variant */
+  --border: #3e362c;             /* border */
+  --on-surface: #eae1da;         /* on-surface */
+  --on-surface-variant: #dbc1b3; /* on-surface-variant */
+  --primary: #ffb689;            /* primary */
+  --primary-container: #f28c45;  /* primary-container（南瓜橙） */
+  --on-primary: #512300;         /* on-primary */
+  --secondary: #9fd3a2;          /* secondary（菠菜绿，成功） */
+  --danger: #d9604f;             /* danger（失败） */
+  --error: #ffb4ab;
+  --tertiary: #e7c362;           /* tertiary（运行中强调） */
+  --radius: 12px;                /* rounded-lg */
+  --radius-sm: 6px;
+  --space: 8px;                  /* 8px 基准间距 */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--on-surface);
+  font-family: 'Be Vietnam Pro', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(24px + env(safe-area-inset-top)) 12px calc(32px + env(safe-area-inset-bottom));
+}
+
+/* ===== 品牌头部 ===== */
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; width: 100%; max-width: 480px; }
+.brand-mark {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffd0a3, var(--primary-container) 60%, #c96a2e);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 1px var(--border), 0 4px 16px rgba(0,0,0,.35);
+}
+.brand-mark svg { width: 22px; height: 22px; }
+.brand-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 700; line-height: 24px; }
+.brand-sub { font-size: 12px; color: var(--on-surface-variant); line-height: 16px; }
+
+/* ===== 主卡片 ===== */
+.card {
+  width: 100%; max-width: 480px;
+  background: var(--surface-container);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex; flex-direction: column; align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+.card + .card { margin-top: 16px; }
+
+/* ===== 成长印记圆环 ===== */
+.ring-wrap { position: relative; width: 168px; height: 168px; margin-bottom: 20px; }
+.ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-track { stroke: var(--surface-variant); }
+.ring-progress {
+  stroke: var(--primary-container);
+  transition: stroke-dashoffset .6s ease, stroke .3s ease;
+  stroke-linecap: round;
+}
+.ring-center {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.ring-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ring-label { font-size: 12px; color: var(--on-surface-variant); margin-top: 4px; }
+
+/* ===== 状态徽标 ===== */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500; line-height: 16px;
+  padding: 4px 10px; border-radius: 9999px;
+  margin-bottom: 20px;
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.badge.idle { color: var(--on-surface-variant); background: var(--surface-variant); }
+.badge.running { color: var(--tertiary); background: rgba(231,195,98,.12); }
+.badge.success { color: var(--secondary); background: rgba(159,211,162,.12); }
+.badge.failed { color: var(--error); background: rgba(255,180,171,.12); }
+
+/* ===== 一键启动按钮 ===== */
+.btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px; font-weight: 700; line-height: 22px;
+  color: var(--on-primary);
+  background: var(--primary-container);
+  border: none; border-radius: 12px;
+  padding: 14px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .25s ease, transform .1s ease, box-shadow .25s ease, opacity .25s ease;
+  box-shadow: 0 4px 16px rgba(242,140,69,.28);
+}
+.btn:hover:not(:disabled) { background: #ff9d58; box-shadow: 0 6px 20px rgba(242,140,69,.38); }
+.btn:active:not(:disabled) { transform: scale(.97); }
+.btn:disabled { cursor: not-allowed; opacity: .85; }
+.btn .btn-icon { display: inline-flex; }
+.btn .btn-icon svg { width: 18px; height: 18px; }
+
+/* 运行中：南瓜橙 + 旋转光环 */
+.btn.running { background: var(--primary-container); }
+.btn.running .spin {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid rgba(81,35,0,.35);
+  border-top-color: var(--on-primary);
+  animation: spin .8s linear infinite;
+}
+/* 成功：菠菜绿 */
+.btn.success { background: var(--secondary); color: #043916; box-shadow: 0 4px 16px rgba(159,211,162,.25); }
+/* 失败：危险红 */
+.btn.failed { background: var(--danger); color: #fff; box-shadow: 0 4px 16px rgba(217,96,79,.25); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== 状态文案 ===== */
+.status-text { margin-top: 16px; font-size: 13px; color: var(--on-surface-variant); text-align: center; min-height: 18px; }
+
+/* ===== 结果统计 ===== */
+.result-head { width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.result-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 600; }
+.result-duration { font-size: 12px; color: var(--on-surface-variant); font-variant-numeric: tabular-nums; }
+.stats { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 8px;
+  text-align: center;
+}
+.stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat-pass { color: var(--secondary); }
+.stat-fail { color: var(--error); }
+.stat-skip { color: var(--on-surface-variant); }
+.stat-label { font-size: 11px; color: var(--on-surface-variant); margin-top: 2px; }
+
+/* ===== 失败明细 ===== */
+.failures { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.failure {
+  background: rgba(217,96,79,.08);
+  border: 1px solid rgba(217,96,79,.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.failure-name { font-size: 13px; font-weight: 500; color: var(--on-surface); word-break: break-all; }
+.failure-msg { font-size: 12px; color: var(--on-surface-variant); margin-top: 4px; word-break: break-word; }
+
+/* ===== 隐藏工具类 ===== */
+.hidden { display: none !important; }
+
+/* ===== 响应式：窄屏（<768px 单列，间距收紧） ===== */
+@media (max-width: 767px) {
+  body { padding: calc(16px + env(safe-area-inset-top)) 12px calc(24px + env(safe-area-inset-bottom)); }
+  .card { padding: 20px 16px; }
+  .ring-wrap { width: 148px; height: 148px; }
+  .ring-value { font-size: 24px; }
+  .btn { padding: 13px 16px; font-size: 14px; }
+  .stat-num { font-size: 18px; }
+}
+
+/* ===== 无障碍：键盘焦点可见 ===== */
+.btn:focus-visible { outline: 3px solid rgba(255,182,137,.6); outline-offset: 2px; }
+
+/* ===== 减弱动态偏好 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .btn.running .spin { animation-duration: 1.6s; }
+  .ring-progress { transition: none; }
+}
+</style>
+</head>
+<body>
+  <!-- 品牌头部 -->
+  <header class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.1 5.2L19.5 10l-5.4 1.8L12 17l-2.1-5.2L4.5 10l5.4-1.8L12 3z" fill="#fff" opacity=".9"/></svg>
+    </div>
+    <div>
+      <div class="brand-title">一键测试</div>
+      <div class="brand-sub">宝宝辅食与成长记录 · 后端测试控制台</div>
+    </div>
+  </header>
+
+  <!-- 主操作卡片 -->
+  <main class="card">
+    <div class="ring-wrap" aria-hidden="true">
+      <svg class="ring-svg" viewBox="0 0 100 100">
+        <circle class="ring-track" cx="50" cy="50" r="45" fill="none" stroke-width="6" stroke-linecap="round"></circle>
+        <circle class="ring-progress" id="ringProgress" cx="50" cy="50" r="45" fill="none"
+                stroke-width="6" stroke-linecap="round" stroke-dasharray="282.7" stroke-dashoffset="282.7"></circle>
+      </svg>
+      <div class="ring-center">
+        <div class="ring-value" id="ringValue">待机</div>
+        <div class="ring-label" id="ringLabel">尚未运行测试</div>
+      </div>
+    </div>
+
+    <div class="badge idle" id="stateBadge">
+      <span class="badge-dot"></span><span id="badgeText">就绪</span>
+    </div>
+
+    <button class="btn" id="runBtn" type="button" aria-live="polite">
+      <span class="btn-icon" id="btnIcon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12v4l-6 5 6 5v4H6v-4l6-5-6-5V3z" fill="currentColor"/></svg>
+      </span>
+      <span id="btnText">一键启动测试</span>
+    </button>
+
+    <div class="status-text" id="statusText">点击上方按钮，运行完整测试套件（pytest，约 10 秒）。</div>
+  </main>
+
+  <!-- 结果卡片 -->
+  <section class="card hidden" id="resultCard">
+    <div class="result-head">
+      <span class="result-title">测试结果</span>
+      <span class="result-duration" id="durationText"></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num" id="statTotal">0</div><div class="stat-label">用例总数</div></div>
+      <div class="stat"><div class="stat-num stat-pass" id="statPassed">0</div><div class="stat-label">通过</div></div>
+      <div class="stat"><div class="stat-num stat-fail" id="statFailed">0</div><div class="stat-label">失败</div></div>
+      <div class="stat"><div class="stat-num stat-skip" id="statSkipped">0</div><div class="stat-label">跳过</div></div>
+    </div>
+    <div class="failures hidden" id="failuresBox"></div>
+  </section>
+
+<script>
+(function () {
+  'use strict';
+
+  // 页面元素引用
+  var runBtn = document.getElementById('runBtn');
+  var btnIcon = document.getElementById('btnIcon');
+  var btnText = document.getElementById('btnText');
+  var statusText = document.getElementById('statusText');
+  var stateBadge = document.getElementById('stateBadge');
+  var badgeText = document.getElementById('badgeText');
+  var ringProgress = document.getElementById('ringProgress');
+  var ringValue = document.getElementById('ringValue');
+  var ringLabel = document.getElementById('ringLabel');
+  var resultCard = document.getElementById('resultCard');
+  var failuresBox = document.getElementById('failuresBox');
+
+  var RING_LEN = 282.7;      // 圆环周长（2πr，r=45）
+  var POLL_INTERVAL = 1500;  // 轮询间隔（毫秒）
+  var pollTimer = null;
+  var running = false;
+
+  /**
+   * 图标模板：play（开始）、spinner（运行中）、check（成功）、alert（失败）
+   */
+  var ICONS = {
+    play: '<svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12v4l-6 5 6 5v4H6v-4l6-5-6-5V3z" fill="currentColor"/></svg>',
+    spinner: '<span class="spin"></span>',
+    check: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    alert: '<svg viewBox="0 0 24 24" fill="none"><path d="M12 3L2.5 20h19L12 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>'
+  };
+
+  /**
+   * 切换按钮与状态徽标的视觉状态。
+   * @param {string} state - idle | running | success | failed
+   */
+  function setState(state) {
+    runBtn.className = 'btn ' + state;
+    stateBadge.className = 'badge ' + state;
+    runBtn.disabled = (state === 'running');
+
+    if (state === 'idle') {
+      btnIcon.innerHTML = ICONS.play;
+      btnText.textContent = '一键启动测试';
+      badgeText.textContent = '就绪';
+    } else if (state === 'running') {
+      btnIcon.innerHTML = ICONS.spinner;
+      btnText.textContent = '测试运行中…';
+      badgeText.textContent = '运行中';
+    } else if (state === 'success') {
+      btnIcon.innerHTML = ICONS.check;
+      btnText.textContent = '测试全部通过';
+      badgeText.textContent = '全部通过';
+    } else if (state === 'failed') {
+      btnIcon.innerHTML = ICONS.alert;
+      btnText.textContent = '存在失败用例';
+      badgeText.textContent = '测试未通过';
+    }
+  }
+
+  /**
+   * 更新成长印记圆环的进度与中心文案。
+   * @param {number} passed - 通过用例数
+   * @param {number} total  - 用例总数
+   */
+  function setRing(passed, total) {
+    var ratio = total > 0 ? passed / total : 0;
+    ringProgress.style.strokeDashoffset = String(RING_LEN * (1 - ratio));
+    if (total === 0) {
+      ringValue.textContent = '待机';
+      ringLabel.textContent = '尚未运行测试';
+    } else if (ratio >= 1) {
+      ringValue.textContent = '100%';
+      ringLabel.textContent = '全部通过';
+    } else {
+      ringValue.textContent = Math.round(ratio * 100) + '%';
+      ringLabel.textContent = passed + ' / ' + total + ' 通过';
+    }
+  }
+
+  /**
+   * 渲染测试统计与失败明细。
+   * @param {object} result - 后端返回的测试结果
+   */
+  function renderResult(result) {
+    result = result || {};
+    var total = result.tests || 0;
+    var passed = result.passed || 0;
+    var failed = (result.failed || 0) + (result.errors || 0);
+    var skipped = result.skipped || 0;
+
+    document.getElementById('statTotal').textContent = String(total);
+    document.getElementById('statPassed').textContent = String(passed);
+    document.getElementById('statFailed').textContent = String(failed);
+    document.getElementById('statSkipped').textContent = String(skipped);
+    document.getElementById('durationText').textContent =
+      result.duration != null ? '耗时 ' + result.duration + 's' : '';
+
+    // 失败明细
+    failuresBox.innerHTML = '';
+    var failures = result.failures || [];
+    if (failures.length > 0) {
+      failuresBox.classList.remove('hidden');
+      failures.forEach(function (f) {
+        var div = document.createElement('div');
+        div.className = 'failure';
+        var name = document.createElement('div');
+        name.className = 'failure-name';
+        name.textContent = f.name || '未知用例';
+        div.appendChild(name);
+        if (f.message) {
+          var msg = document.createElement('div');
+          msg.className = 'failure-msg';
+          msg.textContent = f.message;
+          div.appendChild(msg);
+        }
+        failuresBox.appendChild(div);
+      });
+    } else {
+      failuresBox.classList.add('hidden');
+    }
+    resultCard.classList.remove('hidden');
+  }
+
+  /**
+   * 从后端统一响应中取出 data。
+   * @param {object} json - 统一响应 {code,message,data}
+   * @return {object} data 字段
+   */
+  function unwrap(json) {
+    return json && typeof json.data !== 'undefined' ? json.data : json;
+  }
+
+  /**
+   * 轮询任务状态直至完成。
+   * @param {string} taskId - 测试任务 ID
+   */
+  function pollTask(taskId) {
+    if (pollTimer) { clearInterval(pollTimer); }
+    pollTimer = setInterval(function () {
+      fetch('/api/v1/system/test-tasks/' + encodeURIComponent(taskId))
+        .then(function (resp) { return resp.json(); })
+        .then(function (json) {
+          var task = unwrap(json);
+          if (!task || !task.status) { return; }
+          if (task.status === 'success' || task.status === 'failed') {
+            clearInterval(pollTimer);
+            pollTimer = null;
+            running = false;
+            if (task.status === 'success') {
+              setState('success');
+              statusText.textContent = '测试套件全部通过，系统运行稳定。';
+            } else {
+              setState('failed');
+              statusText.textContent = '存在失败用例，请查看下方明细后重试。';
+            }
+            setRing((task.result && task.result.passed) || 0, (task.result && task.result.tests) || 0);
+            renderResult(task.result);
+          } else {
+            statusText.textContent = '测试执行中，请稍候…';
+          }
+        })
+        .catch(function () {
+          // 网络异常：保留运行态并继续尝试
+          statusText.textContent = '状态查询失败，正在重试…';
+        });
+    }, POLL_INTERVAL);
+  }
+
+  /**
+   * 一键启动测试：创建任务并开始轮询。
+   */
+  function runTests() {
+    if (running) { return; }
+    running = true;
+    resultCard.classList.add('hidden');
+    setState('running');
+    ringValue.textContent = '…';
+    ringLabel.textContent = '正在准备测试';
+    statusText.textContent = '正在创建测试任务…';
+
+    fetch('/api/v1/system/run-tests', { method: 'POST' })
+      .then(function (resp) { return resp.json(); })
+      .then(function (json) {
+        var task = unwrap(json);
+        if (!task || !task.task_id) {
+          throw new Error('任务创建失败');
+        }
+        statusText.textContent = '测试任务已创建，执行中…';
+        pollTask(task.task_id);
+      })
+      .catch(function (err) {
+        running = false;
+        setState('failed');
+        statusText.textContent = '测试启动失败：' + err.message;
+      });
+  }
+
+  runBtn.addEventListener('click', runTests);
+})();
+</script>
+</body>
+</html>

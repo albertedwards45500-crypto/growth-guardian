@@ -1,0 +1,291 @@
+/**
+ * @file: src/styles/theme.css
+ * @description: 全局主题 "Warm Growth Space"：暖色深色主题 CSS 变量、基础样式与通用工具类。
+ *   配色取自 stitch_/DESIGN.md —— 暖炭底色 + 南瓜橙主色 + 菠菜绿/蛋奶黄辅助色。
+ */
+
+/* ========== 主题变量 ========== */
+:root {
+  /* -- 颜色：表面层次 -- */
+  --color-bg: #17130f; /* Level 0 背景 */
+  --color-surface: #241f1a; /* Level 1 卡片 */
+  --color-surface-high: #2e2821; /* Level 2 弹层/输入框 */
+  --color-surface-low: #1f1b17; /* 更深的容器 */
+  --color-border: #3e362c; /* 高光描边 */
+  --color-border-strong: #554338;
+
+  /* -- 颜色：文字 -- */
+  --color-text: #f3ede3; /* 主文字 */
+  --color-text-secondary: #b7ab9c; /* 次要文字 */
+  --color-text-muted: #a38c7f; /* 弱化文字 */
+
+  /* -- 颜色：品牌 -- */
+  --color-primary: #ffb689; /* 南瓜橙（浅） */
+  --color-primary-strong: #f28c45; /* 南瓜橙（饱和） */
+  --color-on-primary: #512300; /* 主色上的文字 */
+  --color-secondary: #9fd3a2; /* 菠菜绿 */
+  --color-secondary-container: #23532c;
+  --color-tertiary: #e7c362; /* 蛋奶黄 */
+  --color-danger: #d9604f; /* 警示红 */
+  --color-info: #7fa8c9; /* 信息蓝 */
+  --color-purple: #a88bc4; /* 淡紫点缀 */
+
+  /* -- 圆角 -- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* -- 间距（8px 节奏） -- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-xxl: 32px;
+
+  /* -- 字体 -- */
+  --font-heading: 'Plus Jakarta Sans', 'Alibaba PuHuiTi', 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+  --font-body: 'Be Vietnam Pro', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+  /* -- 阴影（暗色下的柔和环境光） -- */
+  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== 基础重置 ========== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+/* 数字等宽，便于数据对齐 */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========== 表单元素 ========== */
+.input,
+.select,
+.textarea {
+  width: 100%;
+  background: var(--color-surface-high);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 9px 12px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-primary-strong);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+/* ========== 按钮 ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, background 0.15s ease;
+  min-height: 40px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary-strong);
+  color: var(--color-on-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-border-strong);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  border-color: var(--color-primary-strong);
+}
+
+.btn-danger-ghost {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1.5px solid var(--color-border-strong);
+}
+
+.btn-danger-ghost:hover:not(:disabled) {
+  border-color: var(--color-danger);
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 13px;
+  min-height: 30px;
+  border-radius: var(--radius-sm);
+}
+
+/* ========== 卡片 ========== */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+/* ========== 徽标 / 标签 ========== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  background: rgba(242, 140, 69, 0.14);
+  color: var(--color-primary);
+}
+
+.tag-green {
+  background: rgba(159, 211, 162, 0.14);
+  color: var(--color-secondary);
+}
+
+.tag-yellow {
+  background: rgba(231, 195, 98, 0.14);
+  color: var(--color-tertiary);
+}
+
+.tag-red {
+  background: rgba(217, 96, 79, 0.16);
+  color: var(--color-danger);
+}
+
+.tag-blue {
+  background: rgba(127, 168, 201, 0.16);
+  color: var(--color-info);
+}
+
+.tag-purple {
+  background: rgba(168, 139, 196, 0.16);
+  color: var(--color-purple);
+}
+
+/* ========== 布局工具 ========== */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: var(--space-lg);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.grow {
+  flex: 1;
+}
+
+/* ========== 弹层 ========== */
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 8, 5, 0.66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  z-index: 60;
+}
+
+.modal {
+  background: var(--color-surface-high);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-pop);
+  width: 100%;
+  max-width: 520px;
+  max-height: 86vh;
+  overflow-y: auto;
+  padding: var(--space-xl);
+}
+
+/* ========== 分页 ========== */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+/* ========== 响应式：移动优先，≥768px 增强 ========== */
+@media (min-width: 768px) {
+  .page {
+    padding: var(--space-xl);
+  }
+}

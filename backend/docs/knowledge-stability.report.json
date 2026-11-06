@@ -1,0 +1,5460 @@
+{
+  "schema_version": "candidate-stability-v1",
+  "status": "failed",
+  "evaluated_on": "2026-10-23",
+  "evaluation_scope": "pending_candidate_stability_only",
+  "challenge_cases": 30,
+  "regression_cases": 17,
+  "repeats_requested": 3,
+  "repeats_evaluated": 3,
+  "retrieval_stable": true,
+  "changed_case_ids": [],
+  "batch_singleton_changed_case_ids": [],
+  "failed_case_ids": [
+    "challenge-daily-milk-volume",
+    "challenge-eye-hand-mouth",
+    "challenge-first-tooth",
+    "challenge-turn-away",
+    "unsupported-topic-content"
+  ],
+  "embedding_vectors_identical": false,
+  "embedding_changed_inputs": 6,
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dimensions": 1024,
+  "cloud_embedding_requests": 15,
+  "cloud_embedded_texts": 159,
+  "unique_input_texts": 52,
+  "embedding_batch_size": 16,
+  "top_k": 3,
+  "min_score": 0.55,
+  "vector_fingerprints": [
+    {
+      "kind": "document",
+      "ids": [
+        "who_infant_young_child_feeding:0"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "96fec8a4094d2d1e1a6d6c2a4656f3b3556fd8a4f90abf6fe576898204e29c21",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "bc7d616e014486e65e6f9898782761778190e06cd2e4f9aad833eeb4cf2ca6dc",
+          "cosine_to_first": 0.9999618268,
+          "max_normalized_component_delta": 0.0011220735
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "bc7d616e014486e65e6f9898782761778190e06cd2e4f9aad833eeb4cf2ca6dc",
+          "cosine_to_first": 0.9999618268,
+          "max_normalized_component_delta": 0.0011220735
+        }
+      ],
+      "identical": false
+    },
+    {
+      "kind": "document",
+      "ids": [
+        "nhs_hunger_fullness_cues:0"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "88619677fd0074273f5980c21e05096a4f07c1d7468a99dcb3b9d40d8f21f0f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "88619677fd0074273f5980c21e05096a4f07c1d7468a99dcb3b9d40d8f21f0f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "88619677fd0074273f5980c21e05096a4f07c1d7468a99dcb3b9d40d8f21f0f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "document",
+      "ids": [
+        "nhs_solid_food_readiness:0"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "c3b76fdc9fff7ca18b4ace071f86784185f16e7d14f7a470c39be6ef0391ab46",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "c3b76fdc9fff7ca18b4ace071f86784185f16e7d14f7a470c39be6ef0391ab46",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "c3b76fdc9fff7ca18b4ace071f86784185f16e7d14f7a470c39be6ef0391ab46",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "document",
+      "ids": [
+        "nhs_choking_hazards:0"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "663795cfda202e17540a7188f00e6ac936753883ec730e1d781408a7bd4a2d74",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "663795cfda202e17540a7188f00e6ac936753883ec730e1d781408a7bd4a2d74",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "663795cfda202e17540a7188f00e6ac936753883ec730e1d781408a7bd4a2d74",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "document",
+      "ids": [
+        "nhs_honey_under_12_months:0"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "41ff82e5bb1a2c091bcb721a9fb5a78d9d07642f52769e3c8f763a41a1cf20ff",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "41ff82e5bb1a2c091bcb721a9fb5a78d9d07642f52769e3c8f763a41a1cf20ff",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "41ff82e5bb1a2c091bcb721a9fb5a78d9d07642f52769e3c8f763a41a1cf20ff",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-no-force"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "5333144b9cb14c106720b9f05a13bdbeeaf3e19fe2792b3404917b2dae2d51f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "5333144b9cb14c106720b9f05a13bdbeeaf3e19fe2792b3404917b2dae2d51f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "5333144b9cb14c106720b9f05a13bdbeeaf3e19fe2792b3404917b2dae2d51f2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-wait-open-mouth"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "aec4721b9bfdcbb7024c094652f9e6b655164826d65d7a0ae1d0417b7b35a6ce",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "aec4721b9bfdcbb7024c094652f9e6b655164826d65d7a0ae1d0417b7b35a6ce",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "aec4721b9bfdcbb7024c094652f9e6b655164826d65d7a0ae1d0417b7b35a6ce",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-turn-away"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "c3f8cd337c26876ab5b1e81a9b6d01df4a6175c25bdb48240469aea5d809c644",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "c3f8cd337c26876ab5b1e81a9b6d01df4a6175c25bdb48240469aea5d809c644",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "c3f8cd337c26876ab5b1e81a9b6d01df4a6175c25bdb48240469aea5d809c644",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-eye-hand-mouth"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "df92b847b841dcb4f1209e29708c232f4e0aac47819d7223853bc4cf174de26c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "df92b847b841dcb4f1209e29708c232f4e0aac47819d7223853bc4cf174de26c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "df92b847b841dcb4f1209e29708c232f4e0aac47819d7223853bc4cf174de26c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-prematurity"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "5305eab32ff7de0234cd9ca0a36e1cbbce5d3cd2ded81c5bf8308e620662415c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "5305eab32ff7de0234cd9ca0a36e1cbbce5d3cd2ded81c5bf8308e620662415c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "5305eab32ff7de0234cd9ca0a36e1cbbce5d3cd2ded81c5bf8308e620662415c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-ready-together"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "30b95f8c038f1ff479c0f2700da159ab502ec9733f4d73b974c09a6f1b7b496d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "30b95f8c038f1ff479c0f2700da159ab502ec9733f4d73b974c09a6f1b7b496d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "30b95f8c038f1ff479c0f2700da159ab502ec9733f4d73b974c09a6f1b7b496d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-food-variety"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "38957bf2787fb5d965a043ddce3a0c0f0630c7955525227d12057d660c887f80",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "38957bf2787fb5d965a043ddce3a0c0f0630c7955525227d12057d660c887f80",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "38957bf2787fb5d965a043ddce3a0c0f0630c7955525227d12057d660c887f80",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-food-hygiene"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "23196d51f580df2018fb85f2d1d3ee9086dfbf4ca7eb4be3e83cb936d9624f7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "23196d51f580df2018fb85f2d1d3ee9086dfbf4ca7eb4be3e83cb936d9624f7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "23196d51f580df2018fb85f2d1d3ee9086dfbf4ca7eb4be3e83cb936d9624f7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-pits-and-bones"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "499171276eddeca81950343ea2b3f5cfdf5804413e538cc317b4bf1b74d176f7",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "499171276eddeca81950343ea2b3f5cfdf5804413e538cc317b4bf1b74d176f7",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "499171276eddeca81950343ea2b3f5cfdf5804413e538cc317b4bf1b74d176f7",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-hard-food"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "f5a4a897062dc3b83614f5e39c98dddb40a704a8ceca1eb2ffca968a2f94576b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "f5a4a897062dc3b83614f5e39c98dddb40a704a8ceca1eb2ffca968a2f94576b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "f5a4a897062dc3b83614f5e39c98dddb40a704a8ceca1eb2ffca968a2f94576b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-round-fruit"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "14cff2e27472b9059cb764317b08d8ed8d0fc32ab4891d5b5b5d06a40dc51d8d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "14cff2e27472b9059cb764317b08d8ed8d0fc32ab4891d5b5b5d06a40dc51d8d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "14cff2e27472b9059cb764317b08d8ed8d0fc32ab4891d5b5b5d06a40dc51d8d",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-high-chair"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "2083d4cbcc46fa61b7e6238df4a0a6c7a336cad1f89475720a53e54826f4446c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "3e27f02bf68c6d5bd0b55637d79fd21c8578e49df8eb2614889db9521235c843",
+          "cosine_to_first": 0.9999529155,
+          "max_normalized_component_delta": 0.0010164856
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "2083d4cbcc46fa61b7e6238df4a0a6c7a336cad1f89475720a53e54826f4446c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": false
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-honey-bacteria"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "67760793e31ebde1d7abe1c682c90373cf47116b0b3b2aafc54c7fb5f37cca4e",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "f12b0c92ae9cb989f952fd29208b4b0af9a6f6c0c1e9ed4663712c67b1d7f3b3",
+          "cosine_to_first": 0.9999433224,
+          "max_normalized_component_delta": 0.0012179845
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "67760793e31ebde1d7abe1c682c90373cf47116b0b3b2aafc54c7fb5f37cca4e",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": false
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-honey-sugar"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "50f0590990a8f9d7ef010db36da43b0e1b6ad33f943b968bbbfa81506925a953",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "50f0590990a8f9d7ef010db36da43b0e1b6ad33f943b968bbbfa81506925a953",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "50f0590990a8f9d7ef010db36da43b0e1b6ad33f943b968bbbfa81506925a953",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-honey-infant"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "e6b557e1ff289a5f64dc4b0fce7bf1825aa6f6477a262ca7080d93008f492eea",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "e6b557e1ff289a5f64dc4b0fce7bf1825aa6f6477a262ca7080d93008f492eea",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "e6b557e1ff289a5f64dc4b0fce7bf1825aa6f6477a262ca7080d93008f492eea",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-electric-toothbrush"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "c79127a2158a50273956edc0bab82bc268e104885dd93fd73d7234d99156562b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "c79127a2158a50273956edc0bab82bc268e104885dd93fd73d7234d99156562b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "c79127a2158a50273956edc0bab82bc268e104885dd93fd73d7234d99156562b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-toothpaste"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "8cd47fea0cd49b7f568c630690769817ebed837195a0aaeabba1ea5da732a1b8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "8cd47fea0cd49b7f568c630690769817ebed837195a0aaeabba1ea5da732a1b8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "8cd47fea0cd49b7f568c630690769817ebed837195a0aaeabba1ea5da732a1b8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-first-tooth"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "a58c047ef0dae2623e3ee7ce5629ef6e6f0bd42f040e881f8f3e6619331b9d15",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "a58c047ef0dae2623e3ee7ce5629ef6e6f0bd42f040e881f8f3e6619331b9d15",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "a58c047ef0dae2623e3ee7ce5629ef6e6f0bd42f040e881f8f3e6619331b9d15",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-night-sleep"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "e2c1142fe14408d9aef065da3782b8a800488becde8afe070ee694b539a390b3",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "e2c1142fe14408d9aef065da3782b8a800488becde8afe070ee694b539a390b3",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "e2c1142fe14408d9aef065da3782b8a800488becde8afe070ee694b539a390b3",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-vaccine-schedule"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "f56f4495bfcf0fae06c1abcd796c5fecef4829a2261f858342bd2801aed029e1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "f56f4495bfcf0fae06c1abcd796c5fecef4829a2261f858342bd2801aed029e1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "f56f4495bfcf0fae06c1abcd796c5fecef4829a2261f858342bd2801aed029e1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-formula-preparation"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "6b71e8bbb8fe80745ae9bb14b4f3b5486ad1d300d17bec43f20395981b87d04a",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "6b71e8bbb8fe80745ae9bb14b4f3b5486ad1d300d17bec43f20395981b87d04a",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "6b71e8bbb8fe80745ae9bb14b4f3b5486ad1d300d17bec43f20395981b87d04a",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-fish-cooking-time"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "2201bd01babc9f5f180825267ad0944f4a77dca9d85e20569e17a753724b6a63",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "2201bd01babc9f5f180825267ad0944f4a77dca9d85e20569e17a753724b6a63",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "2201bd01babc9f5f180825267ad0944f4a77dca9d85e20569e17a753724b6a63",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-daily-milk-volume"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "4fcb5860838a8431f720c1dc656d182542b2a6eddb17f4e8d2c59d2da5adffa0",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "4fcb5860838a8431f720c1dc656d182542b2a6eddb17f4e8d2c59d2da5adffa0",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "4fcb5860838a8431f720c1dc656d182542b2a6eddb17f4e8d2c59d2da5adffa0",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-iron-quantity"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "0bb7af580f31c91df3d043ee3283df149c7835a340c2bf70f33de91bf40d85f1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "0bb7af580f31c91df3d043ee3283df149c7835a340c2bf70f33de91bf40d85f1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "0bb7af580f31c91df3d043ee3283df149c7835a340c2bf70f33de91bf40d85f1",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-food-storage"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "ac3dccaaeaf80a650a88d2cf3cc9845e615f622309321820f92d0c3119235717",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "ac3dccaaeaf80a650a88d2cf3cc9845e615f622309321820f92d0c3119235717",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "ac3dccaaeaf80a650a88d2cf3cc9845e615f622309321820f92d0c3119235717",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-bottle-sterilization"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "9f3d6cdc07905e53d46d6d18771f12d5ad20fbba9cf0cd11249d6131549d5c2f",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "9f3d6cdc07905e53d46d6d18771f12d5ad20fbba9cf0cd11249d6131549d5c2f",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "9f3d6cdc07905e53d46d6d18771f12d5ad20fbba9cf0cd11249d6131549d5c2f",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-growth-percentile"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "067ae684263264ae5cdab00230dac418bca454dd8a619c8177de4f91ef599b7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "067ae684263264ae5cdab00230dac418bca454dd8a619c8177de4f91ef599b7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "067ae684263264ae5cdab00230dac418bca454dd8a619c8177de4f91ef599b7b",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-over-age"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "f49e55bd31eca8d3a1c9b32476c47cc1503d6b87d1c0dd02420e011af10cccef",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "f49e55bd31eca8d3a1c9b32476c47cc1503d6b87d1c0dd02420e011af10cccef",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "f49e55bd31eca8d3a1c9b32476c47cc1503d6b87d1c0dd02420e011af10cccef",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-history"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "358c93bfadbc36e8c0cd139e7bb411f5c9e0e4d79a7ec4cbeb5350f5f7c03e27",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "358c93bfadbc36e8c0cd139e7bb411f5c9e0e4d79a7ec4cbeb5350f5f7c03e27",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "358c93bfadbc36e8c0cd139e7bb411f5c9e0e4d79a7ec4cbeb5350f5f7c03e27",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "challenge-coordination-wrong-topic"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "e80132542d16fd2be3b317a3cc92fd0e90ec5fd90b031cbcb673f6e592d19567",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "e80132542d16fd2be3b317a3cc92fd0e90ec5fd90b031cbcb673f6e592d19567",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "e80132542d16fd2be3b317a3cc92fd0e90ec5fd90b031cbcb673f6e592d19567",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "responsive-feeding"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "de8d3d71c6cbedd8740551a68493da49e6dbb490e6251b26b18f5482719512f9",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "de8d3d71c6cbedd8740551a68493da49e6dbb490e6251b26b18f5482719512f9",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "de8d3d71c6cbedd8740551a68493da49e6dbb490e6251b26b18f5482719512f9",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "closing-mouth"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "a3f9b8f50488392e000819a6820d78e3b26a07be3f7b75823dff7ff04e1ff864",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "a3f9b8f50488392e000819a6820d78e3b26a07be3f7b75823dff7ff04e1ff864",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "a3f9b8f50488392e000819a6820d78e3b26a07be3f7b75823dff7ff04e1ff864",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "solid-food-readiness"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "5a8db8299beafaf5344bec1f098e0a9b73d23a1b5f546b9e7452ea0234fe2e38",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "5a8db8299beafaf5344bec1f098e0a9b73d23a1b5f546b9e7452ea0234fe2e38",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "5a8db8299beafaf5344bec1f098e0a9b73d23a1b5f546b9e7452ea0234fe2e38",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "readiness-before-six"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "31e70f0345b5ab08a15e5e9eefb3659386627c56e4582a501a80f96a80180d97",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "31e70f0345b5ab08a15e5e9eefb3659386627c56e4582a501a80f96a80180d97",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "31e70f0345b5ab08a15e5e9eefb3659386627c56e4582a501a80f96a80180d97",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "premature-readiness"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "3a8f56156a9445bebf9069919730fbaf3bf5dd681abcb5e4b5515d55a024193c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "3a8f56156a9445bebf9069919730fbaf3bf5dd681abcb5e4b5515d55a024193c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "3a8f56156a9445bebf9069919730fbaf3bf5dd681abcb5e4b5515d55a024193c",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "choking-safety"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "3a2a28e5e86e5ba891443f210aab47e2f3b1ea4fe5ddecd1ad1e3885f5f97ebb",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "3a2a28e5e86e5ba891443f210aab47e2f3b1ea4fe5ddecd1ad1e3885f5f97ebb",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "3a2a28e5e86e5ba891443f210aab47e2f3b1ea4fe5ddecd1ad1e3885f5f97ebb",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "upright-supervision"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "ecb9de46b9ab373cec706fdc8f403e900591c5913fd5732f6bb3cb12eb331f26",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "ecb9de46b9ab373cec706fdc8f403e900591c5913fd5732f6bb3cb12eb331f26",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "ecb9de46b9ab373cec706fdc8f403e900591c5913fd5732f6bb3cb12eb331f26",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "honey-eight-months"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "13afe9e9a945314030d8beab69cc378267e6fe9774e0adf0cd1f06b505b7caad",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "13afe9e9a945314030d8beab69cc378267e6fe9774e0adf0cd1f06b505b7caad",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "13afe9e9a945314030d8beab69cc378267e6fe9774e0adf0cd1f06b505b7caad",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "honey-last-eligible-month"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "655f07dcf8f5736c26f86176a682c4f1b1ac3686db5d2a4c5364ef7ba7090e60",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "655f07dcf8f5736c26f86176a682c4f1b1ac3686db5d2a4c5364ef7ba7090e60",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "655f07dcf8f5736c26f86176a682c4f1b1ac3686db5d2a4c5364ef7ba7090e60",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "honey-first-age-boundary"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "94e864101c7d26f951b689b1e30d968ef2fea141d37522d8dfa7b203957c8352",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "94e864101c7d26f951b689b1e30d968ef2fea141d37522d8dfa7b203957c8352",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "94e864101c7d26f951b689b1e30d968ef2fea141d37522d8dfa7b203957c8352",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "age-upper-boundary"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "f7799d93b978246b597c2476cf26ea35d8f0b2e6478d7d9c247ff1dd727f2db2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "f7799d93b978246b597c2476cf26ea35d8f0b2e6478d7d9c247ff1dd727f2db2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "f7799d93b978246b597c2476cf26ea35d8f0b2e6478d7d9c247ff1dd727f2db2",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "outside-corpus-age-range"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "b5b7a5ee2d309fbcbb1cb0b177d0391217926b94e1fa9594cf61bc9e10b85034",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "b5b7a5ee2d309fbcbb1cb0b177d0391217926b94e1fa9594cf61bc9e10b85034",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "b5b7a5ee2d309fbcbb1cb0b177d0391217926b94e1fa9594cf61bc9e10b85034",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "wrong-topic-growth"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "9bda7942d1b3e11536df50c9b78325633eaf5334cee585dbed3f068968a42dc4",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "9bda7942d1b3e11536df50c9b78325633eaf5334cee585dbed3f068968a42dc4",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "9bda7942d1b3e11536df50c9b78325633eaf5334cee585dbed3f068968a42dc4",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "before-source-check-date"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "ea3d920fc69e61f86d26dd1ab0d8277090530881f51b95531f948288781581de",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "05658190c2aa79ac37635e356cb0d657ccda991879f2be27e65cb42ebde8342c",
+          "cosine_to_first": 0.999967558,
+          "max_normalized_component_delta": 0.0012067259
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "ea3d920fc69e61f86d26dd1ab0d8277090530881f51b95531f948288781581de",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": false
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "unsupported-topic-content"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "81315fe9f19ddab3393a05ce2c388b522575dc021a994a791c82a6f15d2a3ea8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "81315fe9f19ddab3393a05ce2c388b522575dc021a994a791c82a6f15d2a3ea8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "81315fe9f19ddab3393a05ce2c388b522575dc021a994a791c82a6f15d2a3ea8",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": true
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "honey-excluded-at-twelve"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "6c73c5817da9a460c81863cb0f4a4156033849f317b72845883d6852afb12a44",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "d3a18837b9624d1f94fc69dcf10a570314d15955fe5769fe1cbec1a00279d3d6",
+          "cosine_to_first": 0.9999433769,
+          "max_normalized_component_delta": 0.0012308401
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "6c73c5817da9a460c81863cb0f4a4156033849f317b72845883d6852afb12a44",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": false
+    },
+    {
+      "kind": "query",
+      "ids": [
+        "honey-query-after-age-range"
+      ],
+      "samples": [
+        {
+          "repeat": 1,
+          "vector_sha256": "d95a8bd8d2a3d5219626876ebdd14eed45b01fbd1419d5fecb2fd034a48a5c95",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        },
+        {
+          "repeat": 2,
+          "vector_sha256": "e244121bd95a5ddd8be2737b8583e607f2d3ddc820a677149b67b763fa7f9262",
+          "cosine_to_first": 0.999928051,
+          "max_normalized_component_delta": 0.0014465865
+        },
+        {
+          "repeat": 3,
+          "vector_sha256": "d95a8bd8d2a3d5219626876ebdd14eed45b01fbd1419d5fecb2fd034a48a5c95",
+          "cosine_to_first": 1.0,
+          "max_normalized_component_delta": 0.0
+        }
+      ],
+      "identical": false
+    }
+  ],
+  "runs": [
+    {
+      "repeat": 1,
+      "status": "failed",
+      "stage": "evaluated",
+      "same_index_replay_stable": true,
+      "rebuilt_index_replay_stable": true,
+      "singleton_probes": [
+        {
+          "case_id": "unsupported-topic-content",
+          "vector_sha256": "9a46292175c87d7d77afffbe6c26f02be09c5c88844cf9fed491e0f9abe4d146",
+          "cosine_to_batch": 0.9999553003,
+          "max_normalized_component_delta": 0.0012021412,
+          "matches_batch_retrieval": true,
+          "evaluation": {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ]
+          },
+          "candidates_before_cutoff": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.55059
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.5339
+            },
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.47383
+            }
+          ]
+        }
+      ],
+      "evaluation": {
+        "status": "failed",
+        "top_k": 3,
+        "min_score": 0.55,
+        "cases": 47,
+        "positive_cases": 27,
+        "empty_cases": 20,
+        "retrieval_errors": 0,
+        "hit_rate": 0.9259,
+        "mean_recall": 0.9259,
+        "mean_precision": 0.6852,
+        "mrr": 0.9259,
+        "empty_result_accuracy": 0.85,
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60156
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60156
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56677
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56677
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_solid_food_readiness"
+            ]
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_hunger_fullness_cues"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.52039
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.49377
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45174
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5382
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.51549
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.49226
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61709
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61709
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.54746
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60062
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60062
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49792
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66109
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66109
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66228
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66228
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.52132
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40098
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49103
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45225
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.44705
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41946
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57203
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57203
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.48159
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75719
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75719
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4746
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41753
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.40419
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.37189
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.58059
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.58059
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.53478
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.43849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.42646
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41672
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.50024
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.44701
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5455
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ]
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4463
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.42325
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40669
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45696
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.39979
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.35795
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47483
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.45629
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45107
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.33379
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "passed": false,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57196
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57196
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46276
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.4192
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40343
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.37725
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.5465
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5462
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ]
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.4817
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.46498
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40766
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-over-age",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-history",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "responsive-feeding",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68427
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68427
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "closing-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60617
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60617
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65774
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65774
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "readiness-before-six",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63575
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63575
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49188
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "premature-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68929
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68929
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.53721
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "choking-safety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49264
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45987
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "upright-supervision",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.55579
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.55579
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.54757
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ]
+          },
+          {
+            "case_id": "honey-eight-months",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47705
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46185
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45163
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60418
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60418
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "before-source-check-date",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.53368
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.47343
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.6454
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.6454
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45303
+              }
+            ],
+            "near_cutoff_document_ids": []
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 2,
+      "status": "failed",
+      "stage": "evaluated",
+      "same_index_replay_stable": true,
+      "rebuilt_index_replay_stable": true,
+      "singleton_probes": [
+        {
+          "case_id": "unsupported-topic-content",
+          "vector_sha256": "9a46292175c87d7d77afffbe6c26f02be09c5c88844cf9fed491e0f9abe4d146",
+          "cosine_to_batch": 0.9999553003,
+          "max_normalized_component_delta": 0.0012021412,
+          "matches_batch_retrieval": true,
+          "evaluation": {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ]
+          },
+          "candidates_before_cutoff": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.55059
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.5333
+            },
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.47383
+            }
+          ]
+        }
+      ],
+      "evaluation": {
+        "status": "failed",
+        "top_k": 3,
+        "min_score": 0.55,
+        "cases": 47,
+        "positive_cases": 27,
+        "empty_cases": 20,
+        "retrieval_errors": 0,
+        "hit_rate": 0.9259,
+        "mean_recall": 0.9259,
+        "mean_precision": 0.6852,
+        "mrr": 0.9259,
+        "empty_result_accuracy": 0.85,
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60135
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60135
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56701
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56701
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_solid_food_readiness"
+            ]
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_hunger_fullness_cues"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.52039
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.49377
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45196
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5382
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.51549
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.49226
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61701
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61701
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.54746
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.6007
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.6007
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49792
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66108
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66108
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66237
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66237
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.52132
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40086
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49103
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45178
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.44705
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41969
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57317
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57317
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.48345
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75672
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75672
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.47419
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41765
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.40419
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.37208
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5802
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5802
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.53478
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.43849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.42646
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41641
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.50024
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.44726
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.54513
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ]
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4463
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.42325
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40712
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45732
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.39979
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.35795
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47452
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.45629
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45107
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.33379
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "passed": false,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57129
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57129
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46276
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41881
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40343
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.37725
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.5465
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5462
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ]
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.4817
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.4649
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40766
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-over-age",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-history",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "responsive-feeding",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68365
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68365
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "closing-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60558
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60558
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65736
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65736
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "readiness-before-six",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63538
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63538
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49188
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "premature-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68889
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68889
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.53721
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "choking-safety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49264
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45987
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "upright-supervision",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5559
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5559
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.54757
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ]
+          },
+          {
+            "case_id": "honey-eight-months",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47699
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46185
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45163
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60384
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60384
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "before-source-check-date",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.53308
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.47343
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.64606
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.64606
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4515
+              }
+            ],
+            "near_cutoff_document_ids": []
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 3,
+      "status": "failed",
+      "stage": "evaluated",
+      "same_index_replay_stable": true,
+      "rebuilt_index_replay_stable": true,
+      "singleton_probes": [
+        {
+          "case_id": "unsupported-topic-content",
+          "vector_sha256": "9a46292175c87d7d77afffbe6c26f02be09c5c88844cf9fed491e0f9abe4d146",
+          "cosine_to_batch": 0.9999553003,
+          "max_normalized_component_delta": 0.0012021412,
+          "matches_batch_retrieval": true,
+          "evaluation": {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ]
+          },
+          "candidates_before_cutoff": [
+            {
+              "document_id": "nhs_honey_under_12_months",
+              "score": 0.55059
+            },
+            {
+              "document_id": "who_infant_young_child_feeding",
+              "score": 0.5333
+            },
+            {
+              "document_id": "nhs_solid_food_readiness",
+              "score": 0.47383
+            }
+          ]
+        }
+      ],
+      "evaluation": {
+        "status": "failed",
+        "top_k": 3,
+        "min_score": 0.55,
+        "cases": 47,
+        "positive_cases": 27,
+        "empty_cases": 20,
+        "retrieval_errors": 0,
+        "hit_rate": 0.9259,
+        "mean_recall": 0.9259,
+        "mean_precision": 0.6852,
+        "mrr": 0.9259,
+        "empty_result_accuracy": 0.85,
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60135
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.66231
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.60424
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60135
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56701
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.67415
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.56701
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.55819
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_solid_food_readiness"
+            ]
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_hunger_fullness_cues"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.52039
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.49377
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45196
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "passed": false,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5382
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.51549
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.49226
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61701
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.66891
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.61701
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.54746
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.6007
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.65367
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.6007
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49792
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66108
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66108
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5719
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66237
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.66237
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.52132
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57458
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40086
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.59871
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49103
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45178
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.58501
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.44705
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41969
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57203
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57203
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.48208
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75719
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75719
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4746
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41719
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.61849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.40419
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.37208
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5802
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.75509
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5802
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.53478
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.43849
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.42646
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41641
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.50024
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.44726
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.61057
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.54513
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ]
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.4463
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.42325
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.40712
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.45732
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.39979
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.35795
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47452
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.45629
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45107
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.33379
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "passed": false,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57129
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.57129
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46276
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.41881
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40343
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.37725
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.5465
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.5462
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ]
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.4817
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.4649
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.40766
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-over-age",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-history",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "responsive-feeding",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68365
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.75979
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68365
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.58801
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "closing-mouth",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60558
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65973
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60558
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.57838
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65736
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.70437
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.65736
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.65562
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "readiness-before-six",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63538
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.69178
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.63538
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49188
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "premature-readiness",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68889
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.74177
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.68889
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.53721
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "choking-safety",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.7139
+              },
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.49264
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.45987
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "upright-supervision",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5559
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.63435
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.5559
+              },
+              {
+                "document_id": "nhs_hunger_fullness_cues",
+                "score": 0.54757
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ]
+          },
+          {
+            "case_id": "honey-eight-months",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.68402
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.47699
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.46185
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.69944
+              },
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45163
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.76524
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60384
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.60384
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "before-source-check-date",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "passed": false,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_honey_under_12_months",
+                "score": 0.55059
+              },
+              {
+                "document_id": "who_infant_young_child_feeding",
+                "score": 0.53308
+              },
+              {
+                "document_id": "nhs_solid_food_readiness",
+                "score": 0.47343
+              }
+            ],
+            "near_cutoff_document_ids": [
+              "nhs_honey_under_12_months"
+            ]
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.6454
+              }
+            ],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.6454
+              }
+            ],
+            "near_cutoff_document_ids": []
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "passed": true,
+            "retrieved_document_ids": [],
+            "missing_document_ids": [],
+            "forbidden_document_ids": [],
+            "retrieval_failed": false,
+            "retrieved_document_scores": [],
+            "candidates_before_cutoff": [
+              {
+                "document_id": "nhs_choking_hazards",
+                "score": 0.45303
+              }
+            ],
+            "near_cutoff_document_ids": []
+          }
+        ]
+      }
+    }
+  ],
+  "index_storage": "memory",
+  "production_index_opened": false,
+  "application_rag_modified": false,
+  "candidate_review_status": "pending",
+  "limitations": [
+    "synthetic_labels_not_independently_reviewed",
+    "no_content_approval",
+    "batched_embedding_not_identical_to_live_request_pattern",
+    "finite_repeats_cannot_establish_provider_determinism",
+    "candidate_retrieval_not_final_answer_evaluation"
+  ],
+  "candidate_sha256": "d96a02f9986c591d35998efdb780dbd83cefed62f11af5d476fef6bbd055dbd9",
+  "cases_sha256": "fa3bdd18aad0bf2bd85976d44a1543c78ff3b7faf8658d34f0959007cdcbe8b1",
+  "regression_cases_sha256": "c2a5835531878f0718e615a442cf49cad498c15f5f80f30caf8256373d5cbe4c"
+}

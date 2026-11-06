@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "replace-positive-case",
+    "query": "请替换为已审核资料能回答的公开测试问题",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": ["replace-with-public-document-id"],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "replace-no-answer-case",
+    "query": "请替换为现有审核资料无法回答的公开测试问题",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true
+  }
+]

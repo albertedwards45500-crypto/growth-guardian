@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>成长宝项目介绍</title>
+<style>
+/* === 页面版式：A4，页脚页码，与《旅策智行》同为报告式排版 === */
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm 18mm;
+  @bottom-center { content: "第 " counter(page) " 页 / 共 " counter(pages) " 页"; font-size: 8.5pt; color: #999; font-family: "Microsoft YaHei", sans-serif; }
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 10.5pt; line-height: 1.75; color: #2b2b2b; margin: 0;
+}
+/* === 封面区 === */
+.cover-title { font-size: 24pt; font-weight: 700; text-align: center; margin: 6pt 0 2pt 0; color: #1f1f1f; }
+.cover-sub { text-align: center; font-size: 11pt; color: #E8833A; font-weight: 600; letter-spacing: 4px; margin-bottom: 14pt; }
+/* === 表格：本文档的核心表达形式 === */
+table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt 0; font-size: 9.5pt; }
+th, td { border: 0.6pt solid #b9b9b9; padding: 5pt 7pt; vertical-align: top; text-align: left; }
+th { background: #fdeee0; color: #8a4b12; font-weight: 700; white-space: nowrap; }
+td { background: #ffffff; }
+tr { break-inside: avoid; }
+/* === 标题体系 === */
+h1 { font-size: 15pt; color: #E8833A; border-left: 5pt solid #E8833A; padding-left: 9pt; margin: 22pt 0 8pt 0; break-after: avoid; }
+h2 { font-size: 11.5pt; color: #1f1f1f; margin: 14pt 0 6pt 0; break-after: avoid; }
+p { margin: 5pt 0; text-align: justify; }
+ul { margin: 4pt 0 8pt 0; padding-left: 18pt; }
+li { margin: 2pt 0; }
+code, .mono { font-family: Consolas, "Courier New", monospace; font-size: 9pt; background: #f5f2ee; padding: 0 3px; border-radius: 2px; }
+.note { font-size: 9pt; color: #666; }
+.intro-line { font-weight: 700; color: #1f1f1f; }
+.chapter-note { font-size: 9.5pt; color: #555; background: #faf6f1; border: 0.6pt solid #e8d9c8; padding: 6pt 9pt; margin: 8pt 0; }
+.arch { font-family: Consolas, "Courier New", monospace; font-size: 8.8pt; line-height: 1.5; background: #faf8f5; border: 0.6pt solid #ddd0c0; padding: 9pt 12pt; white-space: pre; margin: 8pt 0 12pt 0; overflow: hidden; }
+/* === 业务流程图：与《旅策智行》"图一/图二"同款绘制方式 === */
+.flow { display: flex; flex-direction: column; align-items: center; break-inside: avoid; margin: 10pt 0 4pt 0; }
+.fnode { border: 1pt solid #d99a5b; background: #fff8f2; border-radius: 4pt; padding: 4pt 12pt; font-size: 9.5pt; text-align: center; max-width: 82%; line-height: 1.5; }
+.fnode b { color: #8a4b12; }
+.fnode .fn { display: block; font-size: 8.5pt; color: #777; }
+.frow { display: flex; width: 88%; gap: 6pt; }
+.frow .fnode { flex: 1; max-width: none; }
+.farrow { color: #E8833A; font-size: 10pt; line-height: 1.1; margin: 2pt 0; }
+.figcap { text-align: center; font-weight: 700; font-size: 9.5pt; color: #8a4b12; margin: 4pt 0 14pt 0; }
+.disclaimer { margin-top: 18pt; padding-top: 6pt; border-top: 0.6pt solid #ccc; font-size: 8.5pt; color: #888; text-align: center; }
+h1, h2 { page-break-after: avoid; }
+table { page-break-inside: auto; }
+</style>
+</head>
+<body>
+
+<p class="chapter-note">成长宝（ChengZhangBao）项目介绍 —— 本文档按"背景与目标 → 核心流程（含业务流程图） → 功能 → 架构 → 模块关系 → 技术栈 → 设计原则 → 附录"的顺序组织，与实际仓库结构一一对应。</p>
+
+<!-- ============ 一 ============ -->
+<h1>一、项目定位与目标</h1>
+
+<h2>1.1 一句话定义</h2>
+<p class="intro-line">家长记录宝宝的每一次成长与每一餐饮食，系统把数据变成看得懂的生长曲线、营养分析和"现在能吃什么"的直接答案。</p>
+<p>成长宝是一款面向 0-3 岁婴幼儿父母及主要照料者的<b>辅食与成长管理平台</b>，以响应式 Web 应用形态交付——浏览器即用，手机、平板、电脑体验一致，无需安装。它不做"育儿内容门户"，而是围绕自家宝宝的数据做闭环：<b>记录 → 分析 → 推荐 → 指导</b>。所有分析与推荐都从"宝宝档案 + 记录数据"推导，而不是让用户填问卷。</p>
+
+<h2>1.2 背景：四个真实问题</h2>
+<table>
+  <tr><th style="width:6%">#</th><th style="width:20%">问题</th><th>具体表现</th></tr>
+  <tr><td>1</td><td>知识获取碎片化</td><td>辅食添加知识散落在社交平台、短视频与口口相传中，质量参差不齐，新手父母难以辨别哪些适用自家宝宝</td></tr>
+  <tr><td>2</td><td>记录工具分散</td><td>成长数据、饮食情况、疫苗体检分散在多个 App 甚至纸笔记录中，无法形成完整的成长画像</td></tr>
+  <tr><td>3</td><td>缺乏个性化指导</td><td>多数食谱类产品只提供"通用内容"，不结合宝宝月龄、过敏史、饮食偏好给针对性推荐；看到"6 个月能吃什么"的答案，还要自己再判断过不过敏、合不合适</td></tr>
+  <tr><td>4</td><td>喂养焦虑普遍</td><td>奶量够不够、辅食添加顺序对不对、发育是否达标，是新手父母最高频的疑问，却没有一站式答案</td></tr>
+</table>
+<p>这四点决定了产品的技术路线：<b>个性化交给数据与规则，正确性交给确定性代码</b>——过敏规避、月龄筛选、参考线判断全部落在服务层与 SQL 层，不依赖前端软过滤，也不输出模糊的"仅供参考"。</p>
+
+<h2>1.3 目标与非目标</h2>
+<table>
+  <tr><th style="width:24%">目标</th><th>衡量方式</th></tr>
+  <tr><td>降低记录门槛</td><td>一次录入同时服务生长曲线、营养分析、辅食推荐三处，不做重复填写</td></tr>
+  <tr><td>分析可解释</td><td>生长曲线叠加 WHO 2006 标准分位参考线（P3 / P15 / P50 / P85 / P97，0-24 月龄男女分开），并明确标注"参考"而非"诊断"</td></tr>
+  <tr><td>推荐可信</td><td>过敏食材在 SQL 层硬过滤（WHERE 下推），而非前端软过滤；规避结果有明确提示</td></tr>
+  <tr><td>多孩友好</td><td>一个账号管理多个宝宝档案，所有数据按档案归属做权限隔离</td></tr>
+  <tr><td>结果可验证</td><td>117 个自动化用例覆盖单元 / 集成 / 契约 / 迁移 / 限流 / E2E，接口行为有测试锁定</td></tr>
+</table>
+<p><b>非目标（本期明确不做）：</b>母婴社区与 UGC 内容平台；母婴电商与带货；医疗诊断（WHO 参考数据明确标注不用于临床评估，异常区间建议就医）；小程序 / 原生 App 端。</p>
+
+<h2>1.4 目标用户</h2>
+<table>
+  <tr><th style="width:26%">用户类型</th><th style="width:32%">核心诉求</th><th>对应设计</th></tr>
+  <tr><td>新手父母（0-1 岁为主）</td><td>喂养高频疑问、辅食添加顺序</td><td>分月龄喂养指南 + FAQ + 按月龄推荐</td></tr>
+  <tr><td>二胎 / 多孩家庭</td><td>一个账号管理多个宝宝</td><td>多档案切换、数据按宝宝归属隔离</td></tr>
+  <tr><td>全职照料者（含祖辈）</td><td>操作简单、结论直白看得懂</td><td>响应式手机适配、自绘大字号曲线、直白的区间提示</td></tr>
+</table>
+
+<!-- ============ 二 ============ -->
+<h1>二、核心使用流程</h1>
+<p>主链路（单宝宝完整闭环）：</p>
+<div class="arch">注册 / 登录 → 创建宝宝档案（姓名 / 性别 / 出生日期 / 过敏史）
+        ↓
+日常记录 ──┬── 成长指标（身高 / 体重 / 头围）→ WHO 生长曲线 + 阶段进度
+           ├── 每日喂养（母乳 / 配方奶 / 辅食）→ 营养摄入摘要
+           └── 里程碑记录 → 成长印记
+        ↓
+分析结果 ──→ 辅食推荐（月龄 + 过敏规避 + 食材 / 营养筛选）
+        ↓
+指导落地 ──→ 收藏食谱 → 生成一周辅食计划 → 结合宝宝数据的个性化建议</div>
+
+<p><b>图一：核心业务闭环</b>（记录 → 分析 → 推荐 → 指导，一次录入三处受益）：</p>
+<div class="flow">
+  <div class="fnode"><b>创建宝宝档案</b><span class="fn">姓名 / 性别 / 出生日期 / 过敏史 —— 后续一切分析与推荐的锚点</span></div>
+  <div class="farrow">▼</div>
+  <div class="frow">
+    <div class="fnode"><b>成长记录</b><span class="fn">身高 / 体重 / 头围 · 里程碑</span></div>
+    <div class="fnode"><b>饮食记录</b><span class="fn">母乳 / 配方奶 / 辅食</span></div>
+    <div class="fnode"><b>过敏登记</b><span class="fn">过敏食材入库，一次登记全局生效</span></div>
+  </div>
+  <div class="farrow">▼</div>
+  <div class="frow">
+    <div class="fnode"><b>生长曲线</b><span class="fn">实测点 + WHO P3/P50/P97 参考线（0-24 月，男女分开）</span></div>
+    <div class="fnode"><b>成长摘要与阶段进度</b><span class="fn">月龄推算 · 里程碑阶段索引</span></div>
+    <div class="fnode"><b>营养摄入摘要</b><span class="fn">按日聚合奶量与辅食营养</span></div>
+  </div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>辅食推荐引擎</b><span class="fn">月龄区间 + 过敏规避（SQL 下推硬过滤）+ 食材 / 营养 / 关键词多条件筛选</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>指导落地</b><span class="fn">收藏食谱 → 一周辅食计划 → 结合宝宝数据的个性化建议（分月龄指南 + FAQ）</span></div>
+</div>
+<p class="figcap">图一　核心业务闭环</p>
+<p><b>关键设计：</b>① 过敏史一次录入、全局生效——推荐、计划、筛选三条链路共用同一份过敏数据；② 不要求用户填写任何问卷式偏好，个性化全部来自已记录的数据；③ 曲线与分析页直给结论（处于哪个分位区间），细节按需展开。</p>
+
+<!-- ============ 三 ============ -->
+<h1>三、核心功能及其作用</h1>
+<table>
+  <tr><th style="width:10%">能力域</th><th style="width:17%">功能</th><th style="width:26%">作用</th><th>关键实现</th></tr>
+  <tr><td>账号体系</td><td>注册 / 登录、JWT 认证</td><td>保护家庭隐私数据，控制首次使用门槛</td><td><code>auth</code> 模块：OAuth2 Password Flow 签发 JWT，bcrypt 哈希存储，登录连续失败触发限流锁定</td></tr>
+  <tr><td>宝宝档案</td><td>多宝宝管理</td><td>一个账号管理多个孩子（二胎家庭友好）</td><td><code>babies</code> 模块：档案 CRUD，所有业务数据按宝宝归属做权限校验</td></tr>
+  <tr><td rowspan="2">成长记录</td><td>成长指标与曲线</td><td>发育情况"看得懂"，不必自查标准表</td><td><code>growth</code> 服务：月龄推算 → 实测点序列 + WHO 2006 分位参考线（0-24 月，男女分开）组成完整曲线数据</td></tr>
+  <tr><td>里程碑记录</td><td>留下"成长印记"，阶段进度可见</td><td><code>milestones</code> 表 + 阶段索引函数，成长摘要中输出各阶段进度</td></tr>
+  <tr><td>饮食管理</td><td>每日喂养记录与营养摘要</td><td>吃了多少、结构是否均衡有账可查</td><td><code>diet</code> 服务：按日聚合奶量与辅食营养数据，输出当日营养摘要</td></tr>
+  <tr><td>过敏管理</td><td>过敏食材档案</td><td>一次登记，全链路自动规避</td><td><code>allergies</code> 表；推荐与筛选在 SQL WHERE 层排除含过敏食材的食谱</td></tr>
+  <tr><td>辅食推荐</td><td>多条件筛选与推荐</td><td>"现在能吃什么"直接给答案</td><td><code>recipe</code> 服务：月龄 / 食材 / 营养 / 关键词条件下推 SQL；JSON 列 NOT LIKE 方案实现跨库过敏过滤</td></tr>
+  <tr><td>食谱运营</td><td>收藏与一周辅食计划</td><td>从"看食谱"到"安排这周吃什么"</td><td><code>recipe_favorites</code> / <code>meal_plans</code> 表，计划按天组织、可增删调整</td></tr>
+  <tr><td>专业建议</td><td>分月龄指南 + FAQ + 个性化建议</td><td>"为什么这么吃"有依据</td><td><code>advice</code> 服务：聚合 <code>guides</code> / <code>faqs</code> 内容，并结合宝宝月龄与数据输出针对性建议</td></tr>
+  <tr><td>通知</td><td>站内通知</td><td>记录提醒与系统消息有统一入口</td><td><code>notifications</code> 模块 + 未读状态管理，前端独立通知页</td></tr>
+</table>
+
+<!-- ============ 四 ============ -->
+<h1>四、系统架构</h1>
+
+<h2>4.1 总体架构</h2>
+<div class="arch">┌────────────────────────────────────────────────┐
+│  接入端：浏览器（PC / 平板 / 手机，响应式 SPA）        │
+└───────────────────┬────────────────────────────┘
+                    │ HTTPS / RESTful API（JWT 鉴权）
+┌───────────────────▼────────────────────────────┐
+│  API 层：FastAPI（Python 3.11+）                 │
+│  9 个路由模块 / 41 个端点：auth users babies       │
+│  growth diet recipes advice notifications system │
+│  统一响应体 {code, message, data}，/docs 在线文档  │
+└───────────────────┬────────────────────────────┘
+┌───────────────────▼────────────────────────────┐
+│  服务层：6 个领域服务                             │
+│  growth（曲线/摘要） diet（营养聚合）              │
+│  recipe（推荐/过敏规避） advice（指南/建议）        │
+│  who_reference（WHO 参考线数据）                  │
+└───────────────────┬────────────────────────────┘
+┌───────────────────▼────────────────────────────┐
+│  数据层：MySQL 8.0（InnoDB + utf8mb4，12 张表）    │
+│  测试环境 SQLite（内存），跨库兼容写入              │
+└────────────────────────────────────────────────┘
+横切：JWT 鉴权 · 登录限流 · 统一异常 · 统一响应 · 按天滚动日志 · Alembic 迁移</div>
+
+<h2>4.2 前后端形态</h2>
+<table>
+  <tr><th style="width:14%">端</th><th style="width:20%">目录</th><th style="width:30%">技术栈</th><th style="width:14%">规模</th><th>职责</th></tr>
+  <tr><td>前端</td><td><code>frontend/</code></td><td>Vue 3.4 + TypeScript 5.4 + Vite 5 + Pinia 2.2 + Vue Router 4.4 + Axios</td><td>8 个页面 / 2 个 store / 5 个公共组件</td><td>登录注册、宝宝概览、成长记录、饮食记录、食谱、通知</td></tr>
+  <tr><td>后端</td><td><code>backend/</code></td><td>FastAPI + SQLAlchemy 2.x + Pydantic v2 + PyJWT + bcrypt + Alembic</td><td>9 个路由模块 / 41 个端点 / 12 张表</td><td>认证、档案、成长、饮食、食谱、建议、通知、系统</td></tr>
+</table>
+
+<h2>4.3 后端分层</h2>
+<table>
+  <tr><th style="width:12%">层</th><th style="width:26%">目录</th><th style="width:36%">职责</th><th>约束</th></tr>
+  <tr><td>入口层</td><td><code>app/main.py</code></td><td>应用装配、CORS、统一异常包装、启动初始化（建表 + 种子数据）</td><td>统一响应体 <code>{code, message, data}</code></td></tr>
+  <tr><td>路由层</td><td><code>app/api/v1/</code></td><td>参数校验、鉴权、调用服务、组织响应</td><td>不写业务规则，只做编排</td></tr>
+  <tr><td>服务层</td><td><code>app/services/</code></td><td>领域逻辑：月龄计算、曲线构建、营养聚合、推荐与过敏规避、建议组装</td><td>纯函数优先，可独立单测</td></tr>
+  <tr><td>模型层</td><td><code>app/models/</code></td><td>12 张表的 ORM 定义</td><td>业务事实存关系表，结构化清单存 JSON 列</td></tr>
+  <tr><td>横切层</td><td><code>app/core/</code></td><td>配置、数据库与会话、依赖注入、统一异常、日志、登录限流、安全（JWT/bcrypt）</td><td>与业务解耦，全局单例</td></tr>
+  <tr><td>种子数据</td><td><code>app/seed/</code></td><td>25 条食谱、7 篇分月龄喂养指南、12 条 FAQ、演示账号</td><td>开箱即用，启动时幂等初始化</td></tr>
+</table>
+
+<h2>4.4 前端模块</h2>
+<table>
+  <tr><th style="width:14%">层</th><th style="width:32%">目录 / 文件</th><th>说明</th></tr>
+  <tr><td>视图层</td><td><code>src/views/</code>（8 个页面）</td><td>BabyOverview（概览）、GrowthRecords（成长）、DietRecords（饮食）、Recipes（食谱）、Notifications（通知）、Login / Register（账号）、Layout（框架布局）</td></tr>
+  <tr><td>状态层</td><td><code>src/stores/</code>（auth / baby）</td><td>登录态与令牌管理、当前宝宝档案切换；异步数据一律经 store 的 action 获取</td></tr>
+  <tr><td>服务层</td><td><code>src/api/</code>（8 个接口模块 + client.ts）</td><td>按后端模块划分接口文件；client.ts 统一封装 Axios 拦截器，集中处理鉴权头与业务错误码</td></tr>
+  <tr><td>组件层</td><td><code>src/components/</code>（5 个）</td><td><b>GrowthCurve（自绘 SVG 生长曲线）</b>、AppModal、EmptyState / ErrorState / LoadingState 三态组件</td></tr>
+  <tr><td>类型与样式</td><td><code>src/types/api.ts</code>、<code>src/styles/theme.css</code></td><td>与后端 Pydantic 模型对应的 TS 类型契约；CSS Variables 主题令牌</td></tr>
+</table>
+<p class="note">GrowthCurve 采用自绘 SVG（viewBox 640×320）而非图表库：实测点连线 + WHO P3 / P50 / P97 参考线，交互需求简单，自绘零依赖、包体更小、样式完全可控。</p>
+
+<h2>4.5 模块依赖关系</h2>
+<p>依赖关系的三条硬规则：</p>
+<ul>
+  <li><b>单向依赖</b>：路由 → 服务 → 模型 / 数据。服务之间不反向调用路由，避免循环依赖。</li>
+  <li><b>服务层不触 HTTP</b>：全部业务逻辑在服务层以函数形式实现（单入单出），路由层只做参数校验与编排，因此服务层可被多个端点复用，也可独立单测。</li>
+  <li><b>前端组件不直接发请求</b>：组件只消费 store 状态，请求一律经 store action 调用 api 模块，错误处理集中在 Axios 拦截器。</li>
+</ul>
+
+<!-- ============ 五 ============ -->
+<h1>五、主要模块与相互关系</h1>
+<table>
+  <tr><th style="width:9%">领域</th><th style="width:15%">模块</th><th style="width:34%">主要文件</th><th>说明</th></tr>
+  <tr><td>认证</td><td>登录与限流</td><td><code>api/v1/auth.py</code> · <code>core/security.py</code> · <code>core/rate_limit.py</code></td><td>JWT 签发与校验、bcrypt 密码哈希；按账号记录登录失败、连续失败锁定、成功清除，有专项测试覆盖</td></tr>
+  <tr><td>档案</td><td>宝宝档案</td><td><code>api/v1/babies.py</code> · <code>models/baby.py</code></td><td>多宝宝 CRUD 与归属校验，是其余所有业务数据的归属锚点</td></tr>
+  <tr><td>成长</td><td>记录与曲线</td><td><code>api/v1/growth.py</code> · <code>services/growth.py</code> · <code>services/who_reference.py</code></td><td>月龄推算（年+月）、成长摘要、曲线构建（实测点 + WHO 参考线）、里程碑阶段进度；WHO 数据内置男女两套 0-24 月龄 P3/P15/P50/P85/P97 表</td></tr>
+  <tr><td>饮食</td><td>喂养记录</td><td><code>api/v1/diet.py</code> · <code>services/diet.py</code> · <code>models/diet.py</code></td><td>母乳 / 配方奶 / 辅食记录，按日聚合营养摘要；<code>allergies</code> 表承载过敏食材</td></tr>
+  <tr><td>食谱</td><td>推荐引擎</td><td><code>api/v1/recipes.py</code> · <code>services/recipe.py</code> · <code>models/recipe.py</code></td><td>多条件筛选（条件下推 SQL）、过敏规避（JSON 列 NOT LIKE）、收藏、一周辅食计划</td></tr>
+  <tr><td>建议</td><td>指南与 FAQ</td><td><code>api/v1/advice.py</code> · <code>services/advice.py</code> · <code>models/advice.py</code></td><td>分月龄喂养指南、常见问题、结合宝宝数据的个性化建议</td></tr>
+  <tr><td>通知</td><td>站内通知</td><td><code>api/v1/notifications.py</code> · <code>models/notification.py</code></td><td>通知列表与已读状态</td></tr>
+  <tr><td>系统</td><td>健康检查</td><td><code>api/v1/system.py</code></td><td>服务健康与版本信息，供启动脚本与部署探测</td></tr>
+  <tr><td>数据</td><td>种子与迁移</td><td><code>app/seed/*</code> · <code>alembic/</code></td><td>食谱 / 指南 / FAQ 种子数据幂等初始化；数据库结构版本化管理，迁移有专项测试</td></tr>
+</table>
+
+<p><b>图二：一次辅食推荐请求的模块协作</b>（以"6 个月宝宝能吃什么"为例，体现 4.5 节三条依赖规则）：</p>
+<div class="flow">
+  <div class="fnode"><b>用户操作</b><span class="fn">在食谱页点击"为宝宝推荐"</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>视图层</b> Recipes.vue<span class="fn">组件不直接发请求，只消费 store 状态</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>状态层</b> store action<span class="fn">携带当前宝宝档案与过敏食材列表</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>前端服务层</b> api/recipes.ts → Axios 拦截器<span class="fn">自动附 JWT 头；业务错误码集中处理</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>路由层</b> api/v1/recipes.py<span class="fn">参数校验 · 鉴权 · 编排（不写业务规则）</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>服务层</b> services/recipe.py :: recommend_recipes<span class="fn">月龄 / 食材 / 营养 / 过敏规避条件全部下推 SQL（who_reference 提供月龄参考）</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>数据层</b> MySQL 8.0<span class="fn">WHERE 过滤返回食谱集，不全表加载</span></div>
+  <div class="farrow">▼</div>
+  <div class="fnode"><b>统一响应</b> {code, message, data}<span class="fn">前端渲染结果，并提示"已为您规避过敏食材"</span></div>
+</div>
+<p class="figcap">图二　一次辅食推荐请求的模块协作</p>
+
+<!-- ============ 六 ============ -->
+<h1>六、技术栈</h1>
+<table>
+  <tr><th style="width:14%">层</th><th style="width:44%">技术选型</th><th>选用原因</th></tr>
+  <tr><td>前端框架</td><td>Vue 3.4 + TypeScript 5.4（组合式 API）</td><td>类型契约减少前后端字段错配，<code>vue-tsc</code> 构建期类型检查</td></tr>
+  <tr><td>构建与测试</td><td>Vite 5 · Vitest 1.6 + @vue/test-utils</td><td>秒级冷启动与热更新；组件测试与类型检查同链路</td></tr>
+  <tr><td>状态与路由</td><td>Pinia 2.2（按域拆 store）· Vue Router 4.4（全局守卫）</td><td>轻量状态管理；未登录重定向、无档案引导创建在路由层统一收口</td></tr>
+  <tr><td>图表</td><td>无图表库，自绘 SVG</td><td>曲线只需折线 + 分位参考线，自绘可控、零依赖、包体小</td></tr>
+  <tr><td>HTTP 与样式</td><td>Axios（统一拦截器）· 原生 CSS Variables</td><td>错误码集中处理；主题令牌驱动，无预处理器依赖</td></tr>
+  <tr><td>API 框架</td><td>FastAPI + Pydantic v2</td><td>自动生成 OpenAPI 文档（/docs）供联调；请求 / 响应结构化校验</td></tr>
+  <tr><td>ORM 与迁移</td><td>SQLAlchemy 2.x · Alembic</td><td>2.0 风格类型提示；数据库结构版本化，迁移可测</td></tr>
+  <tr><td>数据库</td><td>MySQL 8.0（生产/开发）· SQLite（测试）</td><td>InnoDB + utf8mb4；测试用内存 SQLite 提速，通过统一 JSON 序列化器保证跨库行为一致</td></tr>
+  <tr><td>认证与安全</td><td>PyJWT（HS256）· bcrypt · 自研限流模块</td><td>无状态令牌认证；密码哈希存储；登录失败锁定防暴力破解</td></tr>
+  <tr><td>后端测试</td><td>pytest + httpx TestClient</td><td>16 个测试文件 / 117 个用例，覆盖单元 / 集成 / 契约 / 迁移 / 限流 / E2E</td></tr>
+</table>
+
+<!-- ============ 七 ============ -->
+<h1>七、关键设计原则</h1>
+<table>
+  <tr><th style="width:26%">原则</th><th>落地方式</th></tr>
+  <tr><td>个性化来自数据，不来自问卷</td><td>月龄由出生日期推算，过敏来自档案登记，偏好来自收藏与记录——不要求用户填写任何偏好问卷</td></tr>
+  <tr><td>过滤逻辑下推数据库</td><td>月龄、食材、营养、关键词、过敏规避全部条件下推 SQL WHERE，避免全表加载后内存过滤，数据量增长不劣化</td></tr>
+  <tr><td>跨库行为一致</td><td>生产 MySQL / 测试 SQLite 双兼容：不用数据库专有 JSON 函数，改用统一序列化器 + 文本匹配方案，测试结论对生产有效</td></tr>
+  <tr><td>参考不诊断</td><td>WHO 参考线数据在代码注释与接口文档中明确标注"用于绘图参考，不用于临床诊断"，异常区间引导就医而非给出医疗结论</td></tr>
+  <tr><td>契约先行</td><td>Pydantic 响应模型 + 统一响应体 <code>{code, message, data}</code> + 统一业务错误码表；<code>test_contract.py</code> 契约测试锁定接口行为，前端 TS 类型与后端模型对应</td></tr>
+  <tr><td>全链路可测</td><td>117 个用例分层组织：单元（月龄计算等纯函数）、集成（各模块 API）、契约、迁移、限流、E2E 全流程（注册 → 建档 → 记录 → 推荐）</td></tr>
+</table>
+
+<!-- ============ 附录 ============ -->
+<h1>附录：仓库结构速览</h1>
+<div class="arch">ChengZhangBao/
+├── frontend/                      前端（Vue 3.4 + TS，8 页面 / 2 store）
+│   └── src/
+│       ├── views/                 8 个页面（概览/成长/饮食/食谱/通知/登录/注册/布局）
+│       ├── stores/                auth / baby 两个 Pinia 仓库
+│       ├── api/                   8 个接口模块 + client.ts（统一拦截器）
+│       ├── components/            GrowthCurve（自绘 SVG 曲线）+ 三态组件
+│       ├── types/api.ts           与后端模型对应的 TS 类型契约
+│       └── styles/theme.css       CSS Variables 主题令牌
+├── backend/
+│   ├── app/
+│   │   ├── main.py                应用入口 + 启动初始化（建表 + 种子）
+│   │   ├── api/v1/                9 个路由模块（41 个端点）
+│   │   ├── services/              领域服务（成长/饮食/推荐/建议/WHO 参考线）
+│   │   ├── models/                12 张表 ORM
+│   │   ├── schemas/               Pydantic 请求 / 响应模型
+│   │   ├── core/                  配置/数据库/安全/限流/日志/异常
+│   │   └── seed/                  25 食谱 / 7 指南 / 12 FAQ 种子数据
+│   └── tests/                     16 个测试文件 / 117 个用例
+└── 启动成长宝.bat                  一键启动（后端 :8300 / 前端 :5173）</div>
+
+
+<p class="disclaimer">本文档为项目设计说明，具体实施请结合仓库代码与合规要求确认。</p>
+
+</body>
+</html>

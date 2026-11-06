@@ -1,0 +1,205 @@
+[
+  {
+    "case_id": "responsive-feeding",
+    "query": "如何根据宝宝的饥饿和饱足信号喂养？",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "who_infant_young_child_feeding",
+      "nhs_hunger_fullness_cues"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "closing-mouth",
+    "query": "宝宝吃辅食时紧闭嘴巴、转头，应该继续喂吗？",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_hunger_fullness_cues"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "solid-food-readiness",
+    "query": "开始添加辅食前要同时观察哪些发育准备信号？",
+    "age_months": 6,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "readiness-before-six",
+    "query": "4个月时可以了解哪些信号，判断是否准备好吃辅食？",
+    "age_months": 4,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "premature-readiness",
+    "query": "早产宝宝开始添加辅食的时间该咨询谁？",
+    "age_months": 5,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "choking-safety",
+    "query": "准备辅食时葡萄和骨刺如何处理以减少窒息风险？",
+    "age_months": 10,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "upright-supervision",
+    "query": "宝宝吃饭时需要坐直、系安全带并有人看护吗？",
+    "age_months": 10,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "honey-eight-months",
+    "query": "8个月能吃蜂蜜吗，为什么要限制蜂蜜？",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "honey-last-eligible-month",
+    "query": "11个月能给宝宝喂蜂蜜吗？",
+    "age_months": 11,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "honey-first-age-boundary",
+    "query": "给未满一岁的婴儿喂蜂蜜有风险吗？",
+    "age_months": 0,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false
+  },
+  {
+    "case_id": "age-upper-boundary",
+    "query": "23个月的孩子应怎样回应饥饿饱足信号？",
+    "age_months": 23,
+    "topic": "diet_review",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "who_infant_young_child_feeding"
+    ],
+    "forbidden_document_ids": [
+      "nhs_hunger_fullness_cues"
+    ],
+    "expect_empty": false
+  },
+  {
+    "case_id": "outside-corpus-age-range",
+    "query": "36个月孩子的饥饿饱足信号有哪些？",
+    "age_months": 36,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true
+  },
+  {
+    "case_id": "wrong-topic-growth",
+    "query": "请给出孩子身高体重的生长曲线标准。",
+    "age_months": 8,
+    "topic": "growth_review",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true
+  },
+  {
+    "case_id": "before-source-check-date",
+    "query": "如何回应宝宝的饥饿和饱足信号？",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2020-01-01",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true
+  },
+  {
+    "case_id": "unsupported-topic-content",
+    "query": "该怎样护理宝宝的乳牙和选择牙刷？",
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true
+  },
+  {
+    "case_id": "honey-excluded-at-twelve",
+    "query": "如何安全处理葡萄和骨刺，减少进食窒息风险？",
+    "age_months": 12,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [
+      "nhs_honey_under_12_months",
+      "nhs_solid_food_readiness",
+      "nhs_hunger_fullness_cues"
+    ],
+    "expect_empty": false
+  },
+  {
+    "case_id": "honey-query-after-age-range",
+    "query": "12个月时蜂蜜的限制与肉毒杆菌风险是什么？",
+    "age_months": 12,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "expect_empty": true
+  }
+]

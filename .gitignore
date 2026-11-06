@@ -1,0 +1,54 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and generated bundles
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+*.timestamp-*.mjs
+
+# Runtime data, logs, and temporary outputs
+logs/
+*.log
+*.log.*
+*.db
+*.sqlite
+*.sqlite3
+/backend/data/
+/tmp/
+/output/
+
+# Local editor and assistant state
+.idea/
+.vscode/
+.trae/
+.workbuddy/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
+
+# Local backups and unrelated study material
+*.bak
+*.bak-*
+*_原始备份.docx
+/成长宝-曾子洋.pdf
+/stitch_.zip

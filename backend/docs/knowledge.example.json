@@ -1,0 +1,17 @@
+[
+  {
+    "document_id": "replace-with-public-document-id",
+    "title": "请替换为真实公共文献标题",
+    "content": "请放入经审核、适合一般教育用途的完整原文段落。此示例不是健康知识，不能导入。",
+    "source_url": "https://example.org/replace-with-real-source",
+    "version": "replace-with-source-version",
+    "review_status": "pending",
+    "reviewed_by": "请填写实际内容审核者",
+    "reviewed_on": "2026-10-23",
+    "valid_until": "2027-10-23",
+    "scope": "general_education",
+    "topics": ["feeding_knowledge"],
+    "age_min_months": 6,
+    "age_max_months": 36
+  }
+]

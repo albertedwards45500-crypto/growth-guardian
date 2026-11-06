@@ -1,0 +1,106 @@
+[
+  {
+    "drafted_on": "2026-10-23",
+    "source_checked_on": "2026-10-23",
+    "content_kind": "source_summary",
+    "version": "WHO页面2026-08-04；摘录草稿2026-10-23",
+    "review_status": "pending",
+    "scope": "general_education",
+    "document_id": "who_infant_young_child_feeding",
+    "title": "WHO：婴幼儿喂养——补充喂养（待审核中文摘要）",
+    "content": "WHO在补充喂养小节指出，约6个月开始增加辅食并继续母乳喂养；照护者应回应婴儿的饥饿与饱腹信号，保持卫生，逐渐增加食物量、稠度及种类。原文还按月龄讨论了餐次，并单独说明病期喂养；本摘要不用于给个体制定餐次或病期方案。",
+    "source_url": "https://www.who.int/zh/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+    "source_excerpt": "采取顺应式喂食：识别并回应婴儿的饥饿和饱腹信号；",
+    "reviewer_notes": "已读取WHO中文页面；正文为摘要，短原文仅供定位，不能代替完整小节。页面日期不是本应用审核日期。须核对摘要是否丢失限定条件、当地指南一致性及0至23月龄路由范围；本条仅提供通用信息，不把餐次或病期说明改为个体处方。尚无应用审核人或有效期。",
+    "topics": [
+      "feeding_knowledge",
+      "diet_review"
+    ],
+    "age_min_months": 0,
+    "age_max_months": 23,
+    "source_section": "补充喂养"
+  },
+  {
+    "drafted_on": "2026-10-23",
+    "source_checked_on": "2026-10-23",
+    "content_kind": "translation_draft",
+    "version": "NHS页面审阅2026-02-19；译稿2026-10-23",
+    "review_status": "pending",
+    "scope": "general_education",
+    "document_id": "nhs_hunger_fullness_cues",
+    "title": "NHS：辅食喂养中的饥饿与饱足信号（待审核译文）",
+    "content": "顺着宝宝的进食节奏，留意饥饿和饱足信号。紧闭嘴或转头时停止；用勺喂时等宝宝张嘴，不强迫，没有兴趣时可等下次。",
+    "source_url": "https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/",
+    "source_excerpt": "Do not force your baby to eat.",
+    "reviewer_notes": "已读取来源页面，正文为待审核中文转述，短原文仅作定位；须结合完整小节核对。页面审阅不等于本应用审核。6至11月龄是保守预览路由，不表示范围外不适用。待确认译文和地区适用性。",
+    "topics": [
+      "feeding_knowledge",
+      "diet_review"
+    ],
+    "age_min_months": 6,
+    "age_max_months": 11,
+    "source_section": "How to start solid foods"
+  },
+  {
+    "drafted_on": "2026-10-23",
+    "source_checked_on": "2026-10-23",
+    "content_kind": "translation_draft",
+    "version": "NHS页面审阅2026-02-19；译稿2026-10-23",
+    "review_status": "pending",
+    "scope": "general_education",
+    "document_id": "nhs_solid_food_readiness",
+    "title": "NHS：约6个月开始辅食的准备信号（待审核译文）",
+    "content": "开始辅食通常在约6个月；早产儿的开始时间应咨询专业人员。准备信号需同时出现：坐稳且头部稳定；能协调眼、手和嘴自行取食入口；能吞下而非吐出食物。",
+    "source_url": "https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/",
+    "source_excerpt": "hold their head steady",
+    "reviewer_notes": "正文为上述小节的待审核中文转述，短原文仅作定位；保留约6个月、三个信号同时出现和早产咨询限制。0至11月龄路由允许提前了解准备信号，不表示0月龄可以添加辅食。须核对完整原文、译文及路由范围。",
+    "topics": [
+      "feeding_knowledge"
+    ],
+    "age_min_months": 0,
+    "age_max_months": 11,
+    "source_section": "When to start introducing solid foods; Signs your baby is ready for solid foods"
+  },
+  {
+    "drafted_on": "2026-10-23",
+    "source_checked_on": "2026-10-23",
+    "content_kind": "translation_draft",
+    "version": "NHS页面审阅2026-02-19；译稿2026-10-23",
+    "review_status": "pending",
+    "scope": "general_education",
+    "document_id": "nhs_choking_hazards",
+    "title": "NHS：辅食准备与进食时的窒息风险（待审核译文）",
+    "content": "预防进食窒息时，应避免整粒坚果、生胡萝卜或生苹果等硬食物，去除硬籽、果核及骨刺；小圆形食物如葡萄切为四份。宝宝安全坐直，成人始终在旁看护，高脚椅系好安全带。此为部分提示，不是完整清单或急救指导。",
+    "source_url": "https://www.nhs.uk/baby/weaning-and-feeding/babys-first-solid-foods/",
+    "source_excerpt": "Always stay with your baby",
+    "reviewer_notes": "已读取两个小节；正文为待审核转述，短原文仅作定位，不替代完整上下文。本条仅为预防提示，不含急救操作。6至23月龄为预览路由范围，不表示较大孩子没有风险。须核对切分方式、译文及本地安全要求。",
+    "topics": [
+      "feeding_knowledge",
+      "recipe_recommendation"
+    ],
+    "age_min_months": 6,
+    "age_max_months": 23,
+    "source_section": "Safety and hygiene; Equipment checklist"
+  },
+  {
+    "drafted_on": "2026-10-23",
+    "source_checked_on": "2026-10-23",
+    "content_kind": "translation_draft",
+    "version": "NHS页面审阅2026-02-18；译稿2026-10-23",
+    "review_status": "pending",
+    "scope": "general_education",
+    "document_id": "nhs_honey_under_12_months",
+    "title": "NHS：蜂蜜与婴儿食品限制（待审核译文）",
+    "content": "蜂蜜偶尔含有可在婴儿肠道内产生毒素的细菌，导致婴儿肉毒杆菌病，这是一种非常严重的疾病。NHS建议在孩子超过1岁之前不要给蜂蜜。蜂蜜也是糖，避免食用也有助于预防蛀牙。",
+    "source_url": "https://www.nhs.uk/baby/weaning-and-feeding/foods-to-avoid-giving-babies-and-young-children/",
+    "source_excerpt": "Do not give your child honey until they're over 1 year old.",
+    "reviewer_notes": "已读取Honey完整小节，短原文供定位，正文为待审核转述。0至11为已满月龄整数过滤，仅覆盖未满12个月；12月龄退出此条不等于可以吃蜂蜜，原文over 1 year old的边界及糖限制须审核者确认。删除旧草稿未经核实的包装/含蜂蜜食品/例外措辞；不提供误食处置或诊断。",
+    "topics": [
+      "feeding_knowledge",
+      "recipe_recommendation"
+    ],
+    "age_min_months": 0,
+    "age_max_months": 11,
+    "source_section": "Honey"
+  }
+]

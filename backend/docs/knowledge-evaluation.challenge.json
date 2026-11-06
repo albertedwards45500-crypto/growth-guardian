@@ -1,0 +1,332 @@
+[
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_hunger_fullness_cues"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-no-force",
+    "query": "宝宝对这顿辅食没兴趣，能强迫他把剩下的吃完吗？"
+  },
+  {
+    "age_months": 9,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_hunger_fullness_cues"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-wait-open-mouth",
+    "query": "拿勺子喂的时候，要不要等孩子自己张开嘴？"
+  },
+  {
+    "age_months": 10,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_hunger_fullness_cues"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-turn-away",
+    "query": "孩子在餐椅上抿紧嘴、把脸扭开，该如何回应？"
+  },
+  {
+    "age_months": 6,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-eye-hand-mouth",
+    "query": "第一次试固体食物前，眼睛、手和嘴要能怎样配合？"
+  },
+  {
+    "age_months": 7,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-prematurity",
+    "query": "早出生的孩子，谁能帮忙判断何时开始试固体食物？"
+  },
+  {
+    "age_months": 5,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_solid_food_readiness"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-ready-together",
+    "query": "准备开始辅食，只能坐稳但还会吐出食物算准备好了吗？"
+  },
+  {
+    "age_months": 19,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "who_infant_young_child_feeding"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-food-variety",
+    "query": "辅食的分量、稠度和种类应该怎样逐步变化？"
+  },
+  {
+    "age_months": 20,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "who_infant_young_child_feeding"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-food-hygiene",
+    "query": "添加辅食的通用原则是否包含卫生和回应孩子的饱腹信号？"
+  },
+  {
+    "age_months": 14,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-pits-and-bones",
+    "query": "给孩子准备水果和鱼肉时，硬核及鱼刺要怎么处理？"
+  },
+  {
+    "age_months": 10,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-hard-food",
+    "query": "整颗坚果和生的硬胡萝卜适合直接当宝宝的手指食物吗？"
+  },
+  {
+    "age_months": 6,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-round-fruit",
+    "query": "小圆葡萄怎么切才符合这份辅食安全提示？"
+  },
+  {
+    "age_months": 23,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_choking_hazards"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-high-chair",
+    "query": "用高脚餐椅吃饭时，坐姿、安全带和大人陪护有哪些提醒？"
+  },
+  {
+    "age_months": 11,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-honey-bacteria",
+    "query": "为什么蜂蜜中的细菌可能给婴儿带来风险？"
+  },
+  {
+    "age_months": 9,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-honey-sugar",
+    "query": "这份蜂蜜资料有没有提到糖和蛀牙的关系？"
+  },
+  {
+    "age_months": 0,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [
+      "nhs_honey_under_12_months"
+    ],
+    "forbidden_document_ids": [],
+    "expect_empty": false,
+    "case_id": "challenge-honey-infant",
+    "query": "还没满一周岁的孩子，能直接喂一勺蜂蜜吗？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-electric-toothbrush",
+    "query": "婴儿电动牙刷的刷头型号该怎么选？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-toothpaste",
+    "query": "有没有关于儿童牙膏含氟量和每次用量的资料？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-first-tooth",
+    "query": "宝宝通常什么时候长第一颗牙？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-night-sleep",
+    "query": "夜里频繁醒来，如何安排睡眠作息？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-vaccine-schedule",
+    "query": "肺炎疫苗应该按什么时间表接种？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-formula-preparation",
+    "query": "配方奶粉冲调时需要多少水、几勺粉和多高水温？"
+  },
+  {
+    "age_months": 14,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-fish-cooking-time",
+    "query": "一块鱼肉要蒸多少分钟才能熟透？"
+  },
+  {
+    "age_months": 12,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-daily-milk-volume",
+    "query": "一岁孩子每天应该喝多少毫升奶？"
+  },
+  {
+    "age_months": 9,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-iron-quantity",
+    "query": "一天要摄入多少毫克铁才能达到要求？"
+  },
+  {
+    "age_months": 10,
+    "topic": "recipe_recommendation",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-food-storage",
+    "query": "做好的辅食在冰箱冷藏几天后不能吃？"
+  },
+  {
+    "age_months": 4,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-bottle-sterilization",
+    "query": "奶瓶每天应该消毒几次、每次多久？"
+  },
+  {
+    "age_months": 8,
+    "topic": "growth_review",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-growth-percentile",
+    "query": "想查询男宝宝的身高体重百分位参考表。"
+  },
+  {
+    "age_months": 36,
+    "topic": "feeding_knowledge",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-over-age",
+    "query": "三岁宝宝不愿吃饭，有没有对应年龄的回应式喂养资料？"
+  },
+  {
+    "age_months": 8,
+    "topic": "feeding_knowledge",
+    "as_of": "2025-01-01",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-history",
+    "query": "查询这些辅食资料在2025年时的审核版本。"
+  },
+  {
+    "age_months": 6,
+    "topic": "growth_review",
+    "as_of": "2026-10-23",
+    "expected_document_ids": [],
+    "forbidden_document_ids": [],
+    "expect_empty": true,
+    "case_id": "challenge-coordination-wrong-topic",
+    "query": "坐稳、头部控制、眼手口协调这几个信号是什么？"
+  }
+]

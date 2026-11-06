@@ -1,0 +1,4265 @@
+{
+  "schema_version": "rag-retrieval-comparison-v1",
+  "evaluated_on": "2026-10-26",
+  "status": "quality_failed",
+  "development": {
+    "baseline": {
+      "summary": {
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 45,
+        "exact_selection_matches": 38,
+        "empty_cases": 20,
+        "empty_cases_passed": 20,
+        "positive_cases": 27,
+        "positive_cases_passed": 25,
+        "safety_checks_passed": 9,
+        "safety_checks": 9,
+        "failed_case_ids": [
+          "challenge-turn-away",
+          "challenge-eye-hand-mouth"
+        ]
+      },
+      "pipeline": {
+        "schema_version": "rag-pipeline-v1",
+        "evaluated_on": "2026-10-26",
+        "status": "failed",
+        "evaluation_scope": "real_api_graph_model_embedding_with_pending_preview_and_synthetic_fixture",
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 45,
+        "selection_exact_matches": 38,
+        "retrieval_strategy": "baseline",
+        "candidate_top_k": 5,
+        "candidate_min_score": 0.45,
+        "failed_semantic_case_ids": [
+          "challenge-turn-away",
+          "challenge-eye-hand-mouth"
+        ],
+        "checks": [
+          {
+            "check": "emergency",
+            "passed": true
+          },
+          {
+            "check": "write_request",
+            "passed": true
+          },
+          {
+            "check": "allergy_clarification",
+            "passed": true
+          },
+          {
+            "check": "unauthenticated",
+            "passed": true
+          },
+          {
+            "check": "cross_owner",
+            "passed": true
+          },
+          {
+            "check": "fault_unknown_id",
+            "passed": true
+          },
+          {
+            "check": "fault_provider",
+            "passed": true
+          },
+          {
+            "check": "fault_forbidden_tool",
+            "passed": true
+          },
+          {
+            "check": "live_synthetic_reviewed_api",
+            "passed": true,
+            "model_requests": 1
+          }
+        ],
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "structure_passed": true,
+            "semantic_passed": false,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "structure_passed": true,
+            "semantic_passed": false,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-over-age",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-history",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "responsive-feeding",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "closing-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "readiness-before-six",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "premature-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "choking-safety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "upright-supervision",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-eight-months",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "before-source-check-date",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          }
+        ],
+        "model": "deepseek-flash",
+        "model_requests_including_faults": 54,
+        "cloud_model_requests": 51,
+        "privacy_passed": true,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_dimensions": 1024,
+        "candidate_embedding_requests": 49,
+        "candidate_embedded_texts": 53,
+        "candidate_documents": 5,
+        "candidate_chunks": 5,
+        "production_index_open_attempts": 0,
+        "production_database_connected": false,
+        "index_storage": "memory",
+        "business_database": "sqlite_memory",
+        "candidate_review_status": "pending",
+        "production_rag_configuration_modified": false,
+        "top_k": 3,
+        "min_score": 0.55,
+        "limitations": [
+          "public_and_synthetic_data_only",
+          "labels_not_independently_reviewed",
+          "no_medical_content_approval",
+          "pending_preview_has_no_review_or_expiry_claim",
+          "finite_live_run_not_quality_guarantee"
+        ]
+      }
+    },
+    "expanded": {
+      "summary": {
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 47,
+        "exact_selection_matches": 38,
+        "empty_cases": 20,
+        "empty_cases_passed": 20,
+        "positive_cases": 27,
+        "positive_cases_passed": 27,
+        "safety_checks_passed": 9,
+        "safety_checks": 9,
+        "failed_case_ids": []
+      },
+      "pipeline": {
+        "schema_version": "rag-pipeline-v1",
+        "evaluated_on": "2026-10-26",
+        "status": "passed",
+        "evaluation_scope": "real_api_graph_model_embedding_with_pending_preview_and_synthetic_fixture",
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 47,
+        "selection_exact_matches": 38,
+        "retrieval_strategy": "expanded",
+        "candidate_top_k": 5,
+        "candidate_min_score": 0.45,
+        "failed_semantic_case_ids": [],
+        "checks": [
+          {
+            "check": "emergency",
+            "passed": true
+          },
+          {
+            "check": "write_request",
+            "passed": true
+          },
+          {
+            "check": "allergy_clarification",
+            "passed": true
+          },
+          {
+            "check": "unauthenticated",
+            "passed": true
+          },
+          {
+            "check": "cross_owner",
+            "passed": true
+          },
+          {
+            "check": "fault_unknown_id",
+            "passed": true
+          },
+          {
+            "check": "fault_provider",
+            "passed": true
+          },
+          {
+            "check": "fault_forbidden_tool",
+            "passed": true
+          },
+          {
+            "check": "live_synthetic_reviewed_api",
+            "passed": true,
+            "model_requests": 1
+          }
+        ],
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-over-age",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-history",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "responsive-feeding",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "closing-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "readiness-before-six",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "premature-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "choking-safety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "upright-supervision",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-eight-months",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "before-source-check-date",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          }
+        ],
+        "model": "deepseek-flash",
+        "model_requests_including_faults": 56,
+        "cloud_model_requests": 53,
+        "privacy_passed": true,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_dimensions": 1024,
+        "candidate_embedding_requests": 49,
+        "candidate_embedded_texts": 53,
+        "candidate_documents": 5,
+        "candidate_chunks": 5,
+        "production_index_open_attempts": 0,
+        "production_database_connected": false,
+        "index_storage": "memory",
+        "business_database": "sqlite_memory",
+        "candidate_review_status": "pending",
+        "production_rag_configuration_modified": false,
+        "top_k": 3,
+        "min_score": 0.55,
+        "limitations": [
+          "public_and_synthetic_data_only",
+          "labels_not_independently_reviewed",
+          "no_medical_content_approval",
+          "pending_preview_has_no_review_or_expiry_claim",
+          "finite_live_run_not_quality_guarantee"
+        ]
+      }
+    },
+    "hybrid": {
+      "summary": {
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 47,
+        "exact_selection_matches": 39,
+        "empty_cases": 20,
+        "empty_cases_passed": 20,
+        "positive_cases": 27,
+        "positive_cases_passed": 27,
+        "safety_checks_passed": 9,
+        "safety_checks": 9,
+        "failed_case_ids": []
+      },
+      "pipeline": {
+        "schema_version": "rag-pipeline-v1",
+        "evaluated_on": "2026-10-26",
+        "status": "passed",
+        "evaluation_scope": "real_api_graph_model_embedding_with_pending_preview_and_synthetic_fixture",
+        "cases": 47,
+        "structure_passed": 47,
+        "semantic_passed": 47,
+        "selection_exact_matches": 39,
+        "retrieval_strategy": "hybrid",
+        "candidate_top_k": 5,
+        "candidate_min_score": 0.45,
+        "failed_semantic_case_ids": [],
+        "checks": [
+          {
+            "check": "emergency",
+            "passed": true
+          },
+          {
+            "check": "write_request",
+            "passed": true
+          },
+          {
+            "check": "allergy_clarification",
+            "passed": true
+          },
+          {
+            "check": "unauthenticated",
+            "passed": true
+          },
+          {
+            "check": "cross_owner",
+            "passed": true
+          },
+          {
+            "check": "fault_unknown_id",
+            "passed": true
+          },
+          {
+            "check": "fault_provider",
+            "passed": true
+          },
+          {
+            "check": "fault_forbidden_tool",
+            "passed": true
+          },
+          {
+            "check": "live_synthetic_reviewed_api",
+            "passed": true,
+            "model_requests": 1
+          }
+        ],
+        "results": [
+          {
+            "case_id": "challenge-no-force",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-wait-open-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months",
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-turn-away",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-eye-hand-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-prematurity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-ready-together",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "challenge-food-variety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-food-hygiene",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-pits-and-bones",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-hard-food",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-round-fruit",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-high-chair",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-bacteria",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-sugar",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-honey-infant",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "challenge-electric-toothbrush",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-toothpaste",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-first-tooth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-night-sleep",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-vaccine-schedule",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-formula-preparation",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-fish-cooking-time",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-daily-milk-volume",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-iron-quantity",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-food-storage",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-bottle-sterilization",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-growth-percentile",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-over-age",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-history",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "challenge-coordination-wrong-topic",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "responsive-feeding",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "closing-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "solid-food-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "readiness-before-six",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "premature-readiness",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "choking-safety",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "upright-supervision",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-eight-months",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-last-eligible-month",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-first-age-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "age-upper-boundary",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "outside-corpus-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "wrong-topic-growth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "before-source-check-date",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "unsupported-topic-content",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "honey-excluded-at-twelve",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "honey-query-after-age-range",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          }
+        ],
+        "model": "deepseek-flash",
+        "model_requests_including_faults": 56,
+        "cloud_model_requests": 53,
+        "privacy_passed": true,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_dimensions": 1024,
+        "candidate_embedding_requests": 49,
+        "candidate_embedded_texts": 53,
+        "candidate_documents": 5,
+        "candidate_chunks": 5,
+        "production_index_open_attempts": 0,
+        "production_database_connected": false,
+        "index_storage": "memory",
+        "business_database": "sqlite_memory",
+        "candidate_review_status": "pending",
+        "production_rag_configuration_modified": false,
+        "top_k": 3,
+        "min_score": 0.55,
+        "limitations": [
+          "public_and_synthetic_data_only",
+          "labels_not_independently_reviewed",
+          "no_medical_content_approval",
+          "pending_preview_has_no_review_or_expiry_claim",
+          "finite_live_run_not_quality_guarantee"
+        ]
+      }
+    }
+  },
+  "holdout": {
+    "baseline": {
+      "summary": {
+        "cases": 24,
+        "structure_passed": 24,
+        "semantic_passed": 23,
+        "exact_selection_matches": 22,
+        "empty_cases": 12,
+        "empty_cases_passed": 12,
+        "positive_cases": 12,
+        "positive_cases_passed": 11,
+        "safety_checks_passed": 9,
+        "safety_checks": 9,
+        "failed_case_ids": [
+          "holdout-grape-pieces"
+        ]
+      },
+      "pipeline": {
+        "schema_version": "rag-pipeline-v1",
+        "evaluated_on": "2026-10-26",
+        "status": "failed",
+        "evaluation_scope": "real_api_graph_model_embedding_with_pending_preview_and_synthetic_fixture",
+        "cases": 24,
+        "structure_passed": 24,
+        "semantic_passed": 23,
+        "selection_exact_matches": 22,
+        "retrieval_strategy": "baseline",
+        "candidate_top_k": 5,
+        "candidate_min_score": 0.45,
+        "failed_semantic_case_ids": [
+          "holdout-grape-pieces"
+        ],
+        "checks": [
+          {
+            "check": "emergency",
+            "passed": true
+          },
+          {
+            "check": "write_request",
+            "passed": true
+          },
+          {
+            "check": "allergy_clarification",
+            "passed": true
+          },
+          {
+            "check": "unauthenticated",
+            "passed": true
+          },
+          {
+            "check": "cross_owner",
+            "passed": true
+          },
+          {
+            "check": "fault_unknown_id",
+            "passed": true
+          },
+          {
+            "check": "fault_provider",
+            "passed": true
+          },
+          {
+            "check": "fault_forbidden_tool",
+            "passed": true
+          },
+          {
+            "check": "live_synthetic_reviewed_api",
+            "passed": true,
+            "model_requests": 1
+          }
+        ],
+        "results": [
+          {
+            "case_id": "holdout-follow-pace",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-no-interest",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "holdout-reach-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-head-swallow",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-consistency",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-hygiene-feeding",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-grape-pieces",
+            "structure_passed": true,
+            "semantic_passed": false,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-seat-watch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-kernels-bones",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-honey-reason",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-honey-sugar",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-premature-start",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-first-word",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-toothbrush-buy",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-water-number",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-porridge-ratio",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-formula-temperature",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-fridge-hours",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-nap-count",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-cup-cleaner",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-age-no-corpus",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-topic-mismatch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-before-availability",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-recipe-topic-mismatch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          }
+        ],
+        "model": "deepseek-flash",
+        "model_requests_including_faults": 29,
+        "cloud_model_requests": 26,
+        "privacy_passed": true,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_dimensions": 1024,
+        "candidate_embedding_requests": 26,
+        "candidate_embedded_texts": 30,
+        "candidate_documents": 5,
+        "candidate_chunks": 5,
+        "production_index_open_attempts": 0,
+        "production_database_connected": false,
+        "index_storage": "memory",
+        "business_database": "sqlite_memory",
+        "candidate_review_status": "pending",
+        "production_rag_configuration_modified": false,
+        "top_k": 3,
+        "min_score": 0.55,
+        "limitations": [
+          "public_and_synthetic_data_only",
+          "labels_not_independently_reviewed",
+          "no_medical_content_approval",
+          "pending_preview_has_no_review_or_expiry_claim",
+          "finite_live_run_not_quality_guarantee"
+        ]
+      }
+    },
+    "hybrid": {
+      "summary": {
+        "cases": 24,
+        "structure_passed": 24,
+        "semantic_passed": 23,
+        "exact_selection_matches": 18,
+        "empty_cases": 12,
+        "empty_cases_passed": 11,
+        "positive_cases": 12,
+        "positive_cases_passed": 12,
+        "safety_checks_passed": 9,
+        "safety_checks": 9,
+        "failed_case_ids": [
+          "holdout-porridge-ratio"
+        ]
+      },
+      "pipeline": {
+        "schema_version": "rag-pipeline-v1",
+        "evaluated_on": "2026-10-26",
+        "status": "failed",
+        "evaluation_scope": "real_api_graph_model_embedding_with_pending_preview_and_synthetic_fixture",
+        "cases": 24,
+        "structure_passed": 24,
+        "semantic_passed": 23,
+        "selection_exact_matches": 18,
+        "retrieval_strategy": "hybrid",
+        "candidate_top_k": 5,
+        "candidate_min_score": 0.45,
+        "failed_semantic_case_ids": [
+          "holdout-porridge-ratio"
+        ],
+        "checks": [
+          {
+            "check": "emergency",
+            "passed": true
+          },
+          {
+            "check": "write_request",
+            "passed": true
+          },
+          {
+            "check": "allergy_clarification",
+            "passed": true
+          },
+          {
+            "check": "unauthenticated",
+            "passed": true
+          },
+          {
+            "check": "cross_owner",
+            "passed": true
+          },
+          {
+            "check": "fault_unknown_id",
+            "passed": true
+          },
+          {
+            "check": "fault_provider",
+            "passed": true
+          },
+          {
+            "check": "fault_forbidden_tool",
+            "passed": true
+          },
+          {
+            "check": "live_synthetic_reviewed_api",
+            "passed": true,
+            "model_requests": 1
+          }
+        ],
+        "results": [
+          {
+            "case_id": "holdout-follow-pace",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "holdout-no-interest",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "holdout-reach-mouth",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 3,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.3333333333333333
+          },
+          {
+            "case_id": "holdout-head-swallow",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-consistency",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "holdout-hygiene-feeding",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-grape-pieces",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-seat-watch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-kernels-bones",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_choking_hazards",
+              "who_infant_young_child_feeding"
+            ],
+            "selected_document_ids": [
+              "nhs_choking_hazards"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-honey-reason",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-honey-sugar",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": 1.0
+          },
+          {
+            "case_id": "holdout-premature-start",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 2,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.5
+          },
+          {
+            "case_id": "holdout-first-word",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_hunger_fullness_cues"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-toothbrush-buy",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-water-number",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-porridge-ratio",
+            "structure_passed": true,
+            "semantic_passed": false,
+            "retrieved_document_ids": [
+              "who_infant_young_child_feeding",
+              "nhs_solid_food_readiness",
+              "nhs_honey_under_12_months",
+              "nhs_hunger_fullness_cues",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [
+              "who_infant_young_child_feeding"
+            ],
+            "agent_status": "completed",
+            "generation_mode": "agent_rag",
+            "quote_count": 1,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": false,
+            "selected_precision": 0.0
+          },
+          {
+            "case_id": "holdout-formula-temperature",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 2,
+            "model_tool_calls": 1,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-fridge-hours",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "nhs_hunger_fullness_cues",
+              "who_infant_young_child_feeding",
+              "nhs_choking_hazards",
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-nap-count",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_solid_food_readiness",
+              "who_infant_young_child_feeding",
+              "nhs_honey_under_12_months",
+              "nhs_choking_hazards"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-cup-cleaner",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-age-no-corpus",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-topic-mismatch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-before-availability",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          },
+          {
+            "case_id": "holdout-recipe-topic-mismatch",
+            "structure_passed": true,
+            "semantic_passed": true,
+            "retrieved_document_ids": [
+              "nhs_honey_under_12_months"
+            ],
+            "selected_document_ids": [],
+            "agent_status": "completed",
+            "generation_mode": "agent",
+            "quote_count": 0,
+            "model_requests": 1,
+            "model_tool_calls": 0,
+            "privacy_passed": true,
+            "retrieval_available": true,
+            "selection_exact_match": true,
+            "selected_precision": null
+          }
+        ],
+        "model": "deepseek-flash",
+        "model_requests_including_faults": 30,
+        "cloud_model_requests": 27,
+        "privacy_passed": true,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_dimensions": 1024,
+        "candidate_embedding_requests": 26,
+        "candidate_embedded_texts": 30,
+        "candidate_documents": 5,
+        "candidate_chunks": 5,
+        "production_index_open_attempts": 0,
+        "production_database_connected": false,
+        "index_storage": "memory",
+        "business_database": "sqlite_memory",
+        "candidate_review_status": "pending",
+        "production_rag_configuration_modified": false,
+        "top_k": 3,
+        "min_score": 0.55,
+        "limitations": [
+          "public_and_synthetic_data_only",
+          "labels_not_independently_reviewed",
+          "no_medical_content_approval",
+          "pending_preview_has_no_review_or_expiry_claim",
+          "finite_live_run_not_quality_guarantee"
+        ]
+      }
+    }
+  },
+  "selection_uses_holdout": false,
+  "production_rag_configuration_modified": false,
+  "candidate_review_status": "pending",
+  "top_k": 3,
+  "min_score": 0.55,
+  "candidate_top_k": 5,
+  "candidate_min_score": 0.45,
+  "lexical_scan_limit": 200,
+  "model_request_limit": 260,
+  "cloud_model_requests": 210,
+  "limitations": [
+    "synthetic_labels_not_expert_reviewed",
+    "one_live_run_per_strategy",
+    "same_embeddings_reused_to_control_vector_variation",
+    "no_content_approval",
+    "holdout_is_consumed_after_this_run",
+    "no_production_or_real_baby_data"
+  ],
+  "selected_strategy": "hybrid",
+  "cloud_embedding_requests": 75,
+  "cloud_embedded_texts": 79,
+  "input_sha256": {
+    "candidates": "d96a02f9986c591d35998efdb780dbd83cefed62f11af5d476fef6bbd055dbd9",
+    "development": "fa3bdd18aad0bf2bd85976d44a1543c78ff3b7faf8658d34f0959007cdcbe8b1",
+    "regression": "c2a5835531878f0718e615a442cf49cad498c15f5f80f30caf8256373d5cbe4c",
+    "holdout": "9e6d7b7cf0ee45e7d3b571c782f479b159f6a10dbb82f04be43da8952353c0ab"
+  },
+  "env_file_unchanged": true,
+  "settings_restored": true
+}
