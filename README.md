@@ -56,3 +56,7 @@ npm run build
 ```
 
 更多说明见 [后端文档](backend/README.md) 和 [前端文档](frontend/README.md)。仓库保留 `.env.example` 配置示例；本地密钥、依赖、运行数据与临时文件已通过 `.gitignore` 排除。
+
+## 腾讯云部署
+
+Docker Compose 配置及操作步骤见 [部署说明](deploy/README.md)。前端在本机构建，服务器运行 Nginx、FastAPI 与 MySQL，适配 2 核 2GB 的 Linux 实例。部署前必须核实服务器操作系统；Windows Server 不能直接使用此 Linux 容器方案。
